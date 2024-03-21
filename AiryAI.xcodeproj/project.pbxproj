@@ -41,6 +41,10 @@
 		CC974CF52BAC5C7000B37129 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CF42BAC5C7000B37129 /* FirebaseStorageCombine-Community */; };
 		CC974CF82BAC5C8B00B37129 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CF72BAC5C8B00B37129 /* GoogleSignIn */; };
 		CC974CFA2BAC5C8B00B37129 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CF92BAC5C8B00B37129 /* GoogleSignInSwift */; };
+		CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974CFE2BAC5CE000B37129 /* LoginView.swift */; };
+		CC974D012BAC5CED00B37129 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D002BAC5CED00B37129 /* SigninView.swift */; };
+		CC974D032BAC5D1600B37129 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D022BAC5D1600B37129 /* AuthenticationViewModel.swift */; };
+		CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D042BAC5D2700B37129 /* AAIUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		CC195A572BAC36CA002F2CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC974CBD2BAC5BAD00B37129 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CC974CFE2BAC5CE000B37129 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CC974D002BAC5CED00B37129 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		CC974D022BAC5D1600B37129 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		CC974D042BAC5D2700B37129 /* AAIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAIUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +119,13 @@
 		CC195A522BAC36C9002F2CA3 /* AiryAI */ = {
 			isa = PBXGroup;
 			children = (
-				CC974CBC2BAC5B9E00B37129 /* Utilities */,
+				CC195A572BAC36CA002F2CA3 /* Assets.xcassets */,
 				CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */,
 				CC195A552BAC36C9002F2CA3 /* ContentView.swift */,
-				CC195A572BAC36CA002F2CA3 /* Assets.xcassets */,
+				CC974CFD2BAC5CBE00B37129 /* ViewModel */,
+				CC974CFC2BAC5CB700B37129 /* View */,
+				CC974CFB2BAC5CAE00B37129 /* Model */,
+				CC974CBC2BAC5B9E00B37129 /* Utilities */,
 				CC195A592BAC36CA002F2CA3 /* Preview Content */,
 			);
 			path = AiryAI;
@@ -134,6 +145,31 @@
 				CC974CBD2BAC5BAD00B37129 /* Extensions.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CC974CFB2BAC5CAE00B37129 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC974D042BAC5D2700B37129 /* AAIUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC974CFC2BAC5CB700B37129 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC974CFE2BAC5CE000B37129 /* LoginView.swift */,
+				CC974D002BAC5CED00B37129 /* SigninView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC974CFD2BAC5CBE00B37129 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC974D022BAC5D1600B37129 /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,8 +277,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC974D032BAC5D1600B37129 /* AuthenticationViewModel.swift in Sources */,
 				CC195A562BAC36C9002F2CA3 /* ContentView.swift in Sources */,
+				CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */,
 				CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */,
+				CC974D012BAC5CED00B37129 /* SigninView.swift in Sources */,
+				CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */,
 				CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
