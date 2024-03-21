@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */; };
-		CC195A562BAC36C9002F2CA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC195A552BAC36C9002F2CA3 /* ContentView.swift */; };
+		CC195A562BAC36C9002F2CA3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC195A552BAC36C9002F2CA3 /* MainView.swift */; };
 		CC195A582BAC36CA002F2CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A572BAC36CA002F2CA3 /* Assets.xcassets */; };
 		CC195A5B2BAC36CA002F2CA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */; };
 		CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974CBD2BAC5BAD00B37129 /* Extensions.swift */; };
@@ -51,7 +51,7 @@
 /* Begin PBXFileReference section */
 		CC195A502BAC36C9002F2CA3 /* AiryAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiryAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiryAIApp.swift; sourceTree = "<group>"; };
-		CC195A552BAC36C9002F2CA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC195A552BAC36C9002F2CA3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CC195A572BAC36CA002F2CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC974CBD2BAC5BAD00B37129 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 				CC195A572BAC36CA002F2CA3 /* Assets.xcassets */,
 				CC974D0D2BAC6C8B00B37129 /* GoogleService-Info.plist */,
 				CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */,
-				CC195A552BAC36C9002F2CA3 /* ContentView.swift */,
+				CC195A552BAC36C9002F2CA3 /* MainView.swift */,
 				CC974CFD2BAC5CBE00B37129 /* ViewModel */,
 				CC974CFC2BAC5CB700B37129 /* View */,
 				CC974CFB2BAC5CAE00B37129 /* Model */,
@@ -285,7 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC974D032BAC5D1600B37129 /* AuthenticationViewModel.swift in Sources */,
-				CC195A562BAC36C9002F2CA3 /* ContentView.swift in Sources */,
+				CC195A562BAC36C9002F2CA3 /* MainView.swift in Sources */,
 				CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */,
 				CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */,
 				CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */,
