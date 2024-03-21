@@ -12,6 +12,12 @@ struct SignupView: View {
     
     @StateObject var viewModel = AuthenticationViewModel()
     
+    private func signUpWithEmailPassword() {
+        Task {
+            await viewModel.signUpWithEmailPassword()
+        }
+    }
+    
     var body: some View {
         
         VStack(spacing:10){
@@ -71,9 +77,7 @@ struct SignupView: View {
             }
             .padding()
             
-            Button {
-                
-            } label: {
+            Button (action: signUpWithEmailPassword) {
                 if viewModel.authenticationState != .authenticating {
                     Text("Sign up")
                         .bold()

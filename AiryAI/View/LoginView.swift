@@ -13,6 +13,12 @@ struct LoginView: View {
     @StateObject var viewModel = AuthenticationViewModel()
     @State var isSignupView = false
     
+    private func signInWithEmailPassword() {
+        Task {
+            await viewModel.signInWithEmailPassword()
+        }
+    }
+    
     var body: some View {
         NavigationView{
             
@@ -52,9 +58,7 @@ struct LoginView: View {
                         .background(Divider(), alignment: .bottom)
                         .padding(.bottom, 8)
                         
-                        Button {
-                            
-                        } label:{
+                        Button (action: signInWithEmailPassword) {
                             if viewModel.authenticationState != .authenticating {
                                 Text("Login")
                                     .bold()
