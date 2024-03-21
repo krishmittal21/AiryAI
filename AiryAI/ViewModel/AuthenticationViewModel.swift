@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+enum AuthenticationState {
+    case unauthenticated
+    case authenticating
+    case authenticated
+}
+
+class AuthenticationViewModel: ObservableObject{
+    
+    @Published var name = ""
+    @Published var email = ""
+    @Published var password = ""
+    @Published var authenticationState: AuthenticationState = .unauthenticated
+}
