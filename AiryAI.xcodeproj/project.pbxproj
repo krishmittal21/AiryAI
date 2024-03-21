@@ -11,6 +11,7 @@
 		CC195A562BAC36C9002F2CA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC195A552BAC36C9002F2CA3 /* ContentView.swift */; };
 		CC195A582BAC36CA002F2CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A572BAC36CA002F2CA3 /* Assets.xcassets */; };
 		CC195A5B2BAC36CA002F2CA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */; };
+		CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974CBD2BAC5BAD00B37129 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		CC195A552BAC36C9002F2CA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CC195A572BAC36CA002F2CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC974CBD2BAC5BAD00B37129 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		CC195A522BAC36C9002F2CA3 /* AiryAI */ = {
 			isa = PBXGroup;
 			children = (
+				CC974CBC2BAC5B9E00B37129 /* Utilities */,
 				CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */,
 				CC195A552BAC36C9002F2CA3 /* ContentView.swift */,
 				CC195A572BAC36CA002F2CA3 /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC974CBC2BAC5B9E00B37129 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CC974CBD2BAC5BAD00B37129 /* Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC195A562BAC36C9002F2CA3 /* ContentView.swift in Sources */,
+				CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */,
 				CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
