@@ -19,6 +19,13 @@ struct LoginView: View {
         }
     }
     
+    private func signInWithGoogle() {
+            Task {
+              if await viewModel.signInWithGoogle() == true {
+              }
+            }
+        }
+    
     var body: some View {
         NavigationView{
             
@@ -84,11 +91,9 @@ struct LoginView: View {
                         VStack { Divider() }
                     }
                     
-                    VStack (spacing: 10) {
+                    VStack(spacing: 10){
                         
-                        Button{
-                            
-                        } label:{
+                        Button(action: signInWithGoogle){
                             HStack{
                                 Image("google")
                                     .resizable()
