@@ -42,7 +42,7 @@
 		CC974CF82BAC5C8B00B37129 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CF72BAC5C8B00B37129 /* GoogleSignIn */; };
 		CC974CFA2BAC5C8B00B37129 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CF92BAC5C8B00B37129 /* GoogleSignInSwift */; };
 		CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974CFE2BAC5CE000B37129 /* LoginView.swift */; };
-		CC974D012BAC5CED00B37129 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D002BAC5CED00B37129 /* SigninView.swift */; };
+		CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D002BAC5CED00B37129 /* SignupView.swift */; };
 		CC974D032BAC5D1600B37129 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D022BAC5D1600B37129 /* AuthenticationViewModel.swift */; };
 		CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D042BAC5D2700B37129 /* AAIUser.swift */; };
 /* End PBXBuildFile section */
@@ -55,7 +55,7 @@
 		CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC974CBD2BAC5BAD00B37129 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CC974CFE2BAC5CE000B37129 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		CC974D002BAC5CED00B37129 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
+		CC974D002BAC5CED00B37129 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		CC974D022BAC5D1600B37129 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		CC974D042BAC5D2700B37129 /* AAIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAIUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,7 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				CC974CFE2BAC5CE000B37129 /* LoginView.swift */,
-				CC974D002BAC5CED00B37129 /* SigninView.swift */,
+				CC974D002BAC5CED00B37129 /* SignupView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,6 +250,7 @@
 			packageReferences = (
 				CC974CBF2BAC5C7000B37129 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				CC974CF62BAC5C8B00B37129 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				CC974D062BAC609D00B37129 /* XCRemoteSwiftPackageReference "spline-ios" */,
 			);
 			productRefGroup = CC195A512BAC36C9002F2CA3 /* Products */;
 			projectDirPath = "";
@@ -281,7 +282,7 @@
 				CC195A562BAC36C9002F2CA3 /* ContentView.swift in Sources */,
 				CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */,
 				CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */,
-				CC974D012BAC5CED00B37129 /* SigninView.swift in Sources */,
+				CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */,
 				CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */,
 				CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */,
 			);
@@ -505,6 +506,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 7.0.0;
+			};
+		};
+		CC974D062BAC609D00B37129 /* XCRemoteSwiftPackageReference "spline-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/splinetool/spline-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

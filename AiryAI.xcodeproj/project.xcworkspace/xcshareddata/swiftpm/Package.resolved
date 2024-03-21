@@ -136,6 +136,15 @@
       }
     },
     {
+      "identity" : "spline-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/splinetool/spline-ios",
+      "state" : {
+        "branch" : "main",
+        "revision" : "f94a3ac005cda3ee2a440d8a7af118f210f3f852"
+      }
+    },
+    {
       "identity" : "swift-protobuf",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-protobuf.git",

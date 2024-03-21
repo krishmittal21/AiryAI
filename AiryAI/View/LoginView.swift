@@ -11,17 +11,17 @@ import AuthenticationServices
 struct LoginView: View {
     
     @StateObject var viewModel = AuthenticationViewModel()
+    @State var isSignupView = false
     
     var body: some View {
         NavigationView{
             
             ZStack{
-                Image("logo")
+                Image("logo-transparent")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(minHeight: 200, maxHeight: 400)
                     .padding(.bottom,500)
-                    .padding(.top,20)
                 
                 VStack {
                     VStack{
@@ -52,7 +52,9 @@ struct LoginView: View {
                         .background(Divider(), alignment: .bottom)
                         .padding(.bottom, 8)
                         
-                        Button {}label:{
+                        Button {
+                            
+                        } label:{
                             if viewModel.authenticationState != .authenticating {
                                 Text("Login")
                                     .bold()
@@ -80,7 +82,9 @@ struct LoginView: View {
                     
                     VStack (spacing: 10) {
                         
-                        Button{} label:{
+                        Button{
+                            
+                        } label:{
                             HStack{
                                 Image("google")
                                     .resizable()
@@ -104,6 +108,7 @@ struct LoginView: View {
                         .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                         
                         Button{
+                            isSignupView.toggle()
                         } label: {
                             HStack{
                                 Image(systemName: "envelope.fill")
@@ -121,7 +126,6 @@ struct LoginView: View {
                             .cornerRadius(8)
                             .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                         }
-                        
                     }
                     .padding()
                 }
@@ -129,7 +133,9 @@ struct LoginView: View {
                 .padding()
                 .padding(.top,200)
             }
-            
+            .sheet(isPresented: $isSignupView) {
+                SignupView()
+            }
         }
     }
 }
