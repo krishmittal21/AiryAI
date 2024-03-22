@@ -12,9 +12,7 @@ class ChatViewModel: ObservableObject {
     private var proModel = GenerativeModel(name: "gemini-pro", apiKey: APIKey.default)
     private var proVisionModel = GenerativeModel(name: "gemini-pro-vision", apiKey: APIKey.default)
     private(set) var messages = [ChatMessage]()
-    private(set) var loadingResponse = false
     func sendMessages(message: String, imageData: [Data]) async {
-        loadingResponse = true
         messages.append(.init(role: .user, message: message, images: imageData))
         messages.append(.init(role: .model, message: "",images: nil))
         do {
@@ -35,7 +33,6 @@ class ChatViewModel: ObservableObject {
             }
         }
         catch {
-            loadingResponse = false
             messages.removeLast()
             messages.append(.init(role: .model, message: "Something went wrong. Please try again"))
             print(error.localizedDescription)
