@@ -20,6 +20,7 @@
 		CC89C4A62BAD73E00093F612 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = CC89C4A52BAD73E00093F612 /* GoogleGenerativeAI */; };
 		CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4A72BAD74D80093F612 /* ChatViewModel.swift */; };
 		CC89C4AA2BAD78B90093F612 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */; };
+		CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4AD2BAD89380093F612 /* Chat.swift */; };
 		CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974CBD2BAC5BAD00B37129 /* Extensions.swift */; };
 		CC974CC12BAC5C7000B37129 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CC02BAC5C7000B37129 /* FirebaseAnalytics */; };
 		CC974CC32BAC5C7000B37129 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CC22BAC5C7000B37129 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -71,6 +72,7 @@
 		CC89C4A22BAD71CE0093F612 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		CC89C4A72BAD74D80093F612 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
+		CC89C4AD2BAD89380093F612 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		CC974CBD2BAC5BAD00B37129 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CC974CFE2BAC5CE000B37129 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CC974D002BAC5CED00B37129 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				CC974D042BAC5D2700B37129 /* AAIUser.swift */,
+				CC89C4AD2BAD89380093F612 /* Chat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */,
 				CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */,
 				CC89C4A32BAD71CE0093F612 /* APIKey.swift in Sources */,
+				CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */,
 				CC89C49D2BAD2F9F0093F612 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
