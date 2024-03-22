@@ -10,6 +10,7 @@ import PhotosUI
 
 struct ChatView: View {
     @StateObject private var viewModel = ChatViewModel()
+    @Environment(\.colorScheme) var colorScheme
     @State private var userText: String = ""
     @State private var photoPickerItems = [PhotosPickerItem]()
     @State private var selectedPhotoData = [Data]()
@@ -55,13 +56,23 @@ struct ChatView: View {
                 .frame(height: 50)
             }
             HStack{
-                Button{
-                    
-                } label: {
-                    Image(systemName: "camera").imageScale(.large)
-                }
+                TextField("Message", text: $userText)
+                    .textFieldStyle(RoundedRectTextFieldStyle())
+                    .overlay(
+                        HStack {
+                            Spacer()
+                            Button(action: {}) {
+                                Image(systemName: "mic.fill")
+                                    .imageScale(.medium)
+                                    .foregroundStyle(.gray)
+                            }
+                            .padding()
+                        }
+                    )
                 PhotosPicker(selection: $photoPickerItems, maxSelectionCount: 3, matching: .images) {
-                    Image(systemName: "photo.stack").imageScale(.large)
+                    Image(systemName: "photo.stack")
+                        .imageScale(.large)
+                        .foregroundStyle(colorScheme == .dark ? .white : .black)
                 }
                 .onChange(of: photoPickerItems) {
                     Task {
@@ -73,17 +84,10 @@ struct ChatView: View {
                         }
                     }
                 }
-                TextField("Talk with AiryAI", text: $userText)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.horizontal)
-                Button{
-                    
-                } label: {
-                    Image(systemName: "mic").imageScale(.medium)
-                }
-                .buttonStyle(.bordered)
                 Button(action:sendMessage) {
                     Image(systemName: "paperplane.fill")
+                        .imageScale(.large)
+                        .foregroundStyle(colorScheme == .dark ? .white : .black)
                 }
             }
             .padding()
@@ -113,6 +117,18 @@ struct ChatView: View {
                 .padding(15)
                 .background(message.role == .model ? Color.customBlue : Color.backgroundColor)
         }
+    }
+}
+
+struct RoundedRectTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+            .padding(.vertical,5)
+            .padding(.horizontal,8)
+            .background(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(Color.gray, lineWidth: 1)
+            )
     }
 }
 
