@@ -11,6 +11,7 @@
 		CC195A562BAC36C9002F2CA3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC195A552BAC36C9002F2CA3 /* MainView.swift */; };
 		CC195A582BAC36CA002F2CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A572BAC36CA002F2CA3 /* Assets.xcassets */; };
 		CC195A5B2BAC36CA002F2CA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */; };
+		CC84A1732BADCE240040B837 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1722BADCE240040B837 /* ChatBubbleShape.swift */; };
 		CC89C4972BAD29060093F612 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4962BAD29050093F612 /* ChatView.swift */; };
 		CC89C4992BAD29320093F612 /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4982BAD29320093F612 /* AssistantView.swift */; };
 		CC89C49B2BAD29450093F612 /* ChatHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C49A2BAD29450093F612 /* ChatHistoryView.swift */; };
@@ -22,7 +23,6 @@
 		CC89C4AA2BAD78B90093F612 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */; };
 		CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4AD2BAD89380093F612 /* Chat.swift */; };
 		CC89C4B02BAD93980093F612 /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */; };
-		CC89C4B22BAD97D10093F612 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4B12BAD97D10093F612 /* ChatBubbleShape.swift */; };
 		CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974CBD2BAC5BAD00B37129 /* Extensions.swift */; };
 		CC974CC12BAC5C7000B37129 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CC02BAC5C7000B37129 /* FirebaseAnalytics */; };
 		CC974CC32BAC5C7000B37129 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CC22BAC5C7000B37129 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -66,6 +66,7 @@
 		CC195A552BAC36C9002F2CA3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CC195A572BAC36CA002F2CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC84A1722BADCE240040B837 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
 		CC89C4962BAD29050093F612 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		CC89C4982BAD29320093F612 /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
 		CC89C49A2BAD29450093F612 /* ChatHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryView.swift; sourceTree = "<group>"; };
@@ -76,7 +77,6 @@
 		CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
 		CC89C4AD2BAD89380093F612 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
-		CC89C4B12BAD97D10093F612 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
 		CC974CBD2BAC5BAD00B37129 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CC974CFE2BAC5CE000B37129 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CC974D002BAC5CED00B37129 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -182,7 +182,6 @@
 			children = (
 				CC974D042BAC5D2700B37129 /* AAIUser.swift */,
 				CC89C4AD2BAD89380093F612 /* Chat.swift */,
-				CC89C4B12BAD97D10093F612 /* ChatBubbleShape.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +197,7 @@
 				CC89C49C2BAD2F9F0093F612 /* SettingsView.swift */,
 				CC89C49E2BAD35C30093F612 /* TabWithToolbarView.swift */,
 				CC89C4A22BAD71CE0093F612 /* APIKey.swift */,
+				CC84A1722BADCE240040B837 /* ChatBubbleShape.swift */,
 				CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */,
 			);
 			path = View;
@@ -334,7 +334,7 @@
 				CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */,
 				CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */,
 				CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */,
-				CC89C4B22BAD97D10093F612 /* ChatBubbleShape.swift in Sources */,
+				CC84A1732BADCE240040B837 /* ChatBubbleShape.swift in Sources */,
 				CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */,
 				CC89C4A32BAD71CE0093F612 /* APIKey.swift in Sources */,
 				CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */,
