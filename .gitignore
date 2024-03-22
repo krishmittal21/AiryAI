@@ -91,3 +91,5 @@ iOSInjectionProject/
 **/.DS_Store
 # Google (Firebase) plist file
 GoogleService-Info.plist
+# Google (Gemini API) plist file
+GenerativeAI-Info.plist

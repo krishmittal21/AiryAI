@@ -16,6 +16,13 @@
 		CC89C49B2BAD29450093F612 /* ChatHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C49A2BAD29450093F612 /* ChatHistoryView.swift */; };
 		CC89C49D2BAD2F9F0093F612 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C49C2BAD2F9F0093F612 /* SettingsView.swift */; };
 		CC89C49F2BAD35C30093F612 /* TabWithToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C49E2BAD35C30093F612 /* TabWithToolbarView.swift */; };
+		CC89C4A32BAD71CE0093F612 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4A22BAD71CE0093F612 /* APIKey.swift */; };
+		CC89C4A62BAD73E00093F612 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = CC89C4A52BAD73E00093F612 /* GoogleGenerativeAI */; };
+		CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4A72BAD74D80093F612 /* ChatViewModel.swift */; };
+		CC89C4AA2BAD78B90093F612 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */; };
+		CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4AD2BAD89380093F612 /* Chat.swift */; };
+		CC89C4B02BAD93980093F612 /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */; };
+		CC89C4B22BAD97D10093F612 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4B12BAD97D10093F612 /* ChatBubbleShape.swift */; };
 		CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974CBD2BAC5BAD00B37129 /* Extensions.swift */; };
 		CC974CC12BAC5C7000B37129 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CC02BAC5C7000B37129 /* FirebaseAnalytics */; };
 		CC974CC32BAC5C7000B37129 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CC22BAC5C7000B37129 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -64,6 +71,12 @@
 		CC89C49A2BAD29450093F612 /* ChatHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryView.swift; sourceTree = "<group>"; };
 		CC89C49C2BAD2F9F0093F612 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CC89C49E2BAD35C30093F612 /* TabWithToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabWithToolbarView.swift; sourceTree = "<group>"; };
+		CC89C4A22BAD71CE0093F612 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		CC89C4A72BAD74D80093F612 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
+		CC89C4AD2BAD89380093F612 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
+		CC89C4B12BAD97D10093F612 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
 		CC974CBD2BAC5BAD00B37129 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CC974CFE2BAC5CE000B37129 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CC974D002BAC5CED00B37129 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -93,6 +106,7 @@
 				CC974CD12BAC5C7000B37129 /* FirebaseCrashlytics in Frameworks */,
 				CC974CF12BAC5C7000B37129 /* FirebaseRemoteConfigSwift in Frameworks */,
 				CC974CF82BAC5C8B00B37129 /* GoogleSignIn in Frameworks */,
+				CC89C4A62BAD73E00093F612 /* GoogleGenerativeAI in Frameworks */,
 				CC974CE32BAC5C7000B37129 /* FirebaseInAppMessaging-Beta in Frameworks */,
 				CC974CD52BAC5C7000B37129 /* FirebaseDatabaseSwift in Frameworks */,
 				CC974CDF2BAC5C7000B37129 /* FirebaseFunctions in Frameworks */,
@@ -135,6 +149,7 @@
 				CC974D0F2BAC703500B37129 /* Info.plist */,
 				CC195A572BAC36CA002F2CA3 /* Assets.xcassets */,
 				CC974D0D2BAC6C8B00B37129 /* GoogleService-Info.plist */,
+				CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */,
 				CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */,
 				CC195A552BAC36C9002F2CA3 /* MainView.swift */,
 				CC974CFD2BAC5CBE00B37129 /* ViewModel */,
@@ -166,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				CC974D042BAC5D2700B37129 /* AAIUser.swift */,
+				CC89C4AD2BAD89380093F612 /* Chat.swift */,
+				CC89C4B12BAD97D10093F612 /* ChatBubbleShape.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +197,8 @@
 				CC89C49A2BAD29450093F612 /* ChatHistoryView.swift */,
 				CC89C49C2BAD2F9F0093F612 /* SettingsView.swift */,
 				CC89C49E2BAD35C30093F612 /* TabWithToolbarView.swift */,
+				CC89C4A22BAD71CE0093F612 /* APIKey.swift */,
+				CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				CC974D022BAC5D1600B37129 /* AuthenticationViewModel.swift */,
+				CC89C4A72BAD74D80093F612 /* ChatViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -238,6 +258,7 @@
 				CC974CF42BAC5C7000B37129 /* FirebaseStorageCombine-Community */,
 				CC974CF72BAC5C8B00B37129 /* GoogleSignIn */,
 				CC974CF92BAC5C8B00B37129 /* GoogleSignInSwift */,
+				CC89C4A52BAD73E00093F612 /* GoogleGenerativeAI */,
 			);
 			productName = AiryAI;
 			productReference = CC195A502BAC36C9002F2CA3 /* AiryAI.app */;
@@ -271,6 +292,7 @@
 				CC974CBF2BAC5C7000B37129 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				CC974CF62BAC5C8B00B37129 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				CC974D062BAC609D00B37129 /* XCRemoteSwiftPackageReference "spline-ios" */,
+				CC89C4A42BAD73E00093F612 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
 			);
 			productRefGroup = CC195A512BAC36C9002F2CA3 /* Products */;
 			projectDirPath = "";
@@ -288,6 +310,7 @@
 			files = (
 				CC195A5B2BAC36CA002F2CA3 /* Preview Assets.xcassets in Resources */,
 				CC195A582BAC36CA002F2CA3 /* Assets.xcassets in Resources */,
+				CC89C4AA2BAD78B90093F612 /* GenerativeAI-Info.plist in Resources */,
 				CC974D0E2BAC6C8B00B37129 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,11 +328,16 @@
 				CC195A562BAC36C9002F2CA3 /* MainView.swift in Sources */,
 				CC89C49B2BAD29450093F612 /* ChatHistoryView.swift in Sources */,
 				CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */,
+				CC89C4B02BAD93980093F612 /* ChatBubbleView.swift in Sources */,
 				CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */,
 				CC89C4972BAD29060093F612 /* ChatView.swift in Sources */,
+				CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */,
 				CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */,
 				CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */,
+				CC89C4B22BAD97D10093F612 /* ChatBubbleShape.swift in Sources */,
 				CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */,
+				CC89C4A32BAD71CE0093F612 /* APIKey.swift in Sources */,
+				CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */,
 				CC89C49D2BAD2F9F0093F612 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -520,6 +548,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CC89C4A42BAD73E00093F612 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.8;
+			};
+		};
 		CC974CBF2BAC5C7000B37129 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -547,6 +583,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CC89C4A52BAD73E00093F612 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC89C4A42BAD73E00093F612 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
 		CC974CC02BAC5C7000B37129 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CC974CBF2BAC5C7000B37129 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
