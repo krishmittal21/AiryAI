@@ -6,13 +6,19 @@
 //
 
 import SwiftUI
+import GoogleGenerativeAI
 
 struct ChatView: View {
     @State private var userText: String = ""
+    @State var output: String = ""
+    let model = GenerativeModel(name: "gemini-pro", apiKey: APIKey.default)
     var body: some View {
         VStack{
             Spacer()
-            Text("Welcome to AiryAI")
+            ScrollView{
+                Text(output)
+            }
+            .padding()
             Spacer()
             HStack{
                 Button{
@@ -32,6 +38,16 @@ struct ChatView: View {
                     
                 } label: {
                     Image(systemName: "mic").imageScale(.large)
+                }
+                Button{
+                    Task {
+                        let response = try await model.generateContent(userText)
+                        if let text = response.text {
+                            output = text
+                        }
+                    }
+                } label: {
+                    Image(systemName: "paperplane")
                 }
             }
             .padding()
