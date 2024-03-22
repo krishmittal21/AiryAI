@@ -10,17 +10,10 @@ import SwiftUI
 struct MainView: View {
     
     @StateObject var viewModel = AuthenticationViewModel()
-    
+
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
-            VStack {
-                Button {
-                    viewModel.signOut()
-                } label : {
-                    Text("signout")
-                }
-            }
-            .padding()
+            TabWithToolbarView()
         } else {
             LoginView()
         }
