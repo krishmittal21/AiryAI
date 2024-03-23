@@ -1,5 +1,5 @@
 //
-//  ChatHistoryConversationView.swift
+//  ChatConversationView.swift
 //  AiryAI
 //
 //  Created by Krish Mittal on 23/03/24.
@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct ChatHistoryConversationView: View, Hashable {
-    
-    var conversation = [ChatMessage]()
+struct ChatConversationMessageView: View {
+    var conversation: [ChatMessage]
     
     var body: some View {
         ScrollView {
@@ -42,3 +41,4 @@ struct ChatHistoryConversationView: View, Hashable {
         }
     }
 }
+
