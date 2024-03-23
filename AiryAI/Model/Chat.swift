@@ -10,9 +10,20 @@ import Foundation
 enum ChatRole {
     case user
     case model
+    
+    static func fromString(_ string: String) -> ChatRole? {
+        switch string {
+        case "user":
+            return .user
+        case "model":
+            return .model
+        default:
+            return nil
+        }
+    }
 }
 
-struct ChatMessage: Identifiable, Equatable {
+struct ChatMessage: Identifiable, Equatable, Hashable {
     let id = UUID().uuidString
     var role: ChatRole
     var message: String

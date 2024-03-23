@@ -16,7 +16,7 @@ class ChatViewModel: ObservableObject {
     private var proModel = GenerativeModel(name: "gemini-pro", apiKey: APIKey.default)
     private var proVisionModel = GenerativeModel(name: "gemini-pro-vision", apiKey: APIKey.default)
     private(set) var conversation = [ChatMessage]()
-    private var session = UUID().uuidString
+    @Published var session = UUID().uuidString
     
     func sendMessages(message: String, imageData: [Data]) async {
         conversation.append(.init(role: .user, message: message, images: imageData))
