@@ -11,22 +11,18 @@ struct ChatHistoryView: View {
     @StateObject private var viewModel = ChatHistoryViewModel()
     var body: some View {
         NavigationView {
-            List {
-                ForEach(viewModel.conversations, id: \.self) { conversation in
-                    NavigationLink(destination: ChatHistoryConversationView(conversation: conversation)){
-                        if let firstMessage = conversation.first {
-                            let words = firstMessage.message.components(separatedBy: " ")
-                            let displayText = words.prefix(3).joined(separator: " ")
-                            Text(displayText + " ..")
-                                .fontWeight(.medium)
-                        } else {
-                            Text("Untitled")
+            ScrollView {
+                VStack {
+                    ForEach(viewModel.conversations, id: \.self) { conversation in
+                        NavigationLink(destination: ChatHistoryConversationView(conversation: conversation)){
+                            ConversationRowView(conversation: conversation)
                         }
                     }
-                }.listRowSeparator(.hidden)
+                }
+                .padding()
             }
-            .listSectionSeparator(.hidden)
             .padding()
+            .scrollContentBackground(.hidden)
             .onAppear {
                 viewModel.fetchConversations()
             }
@@ -34,6 +30,3 @@ struct ChatHistoryView: View {
     }
 }
 
-#Preview {
-    ChatHistoryView()
-}
