@@ -14,7 +14,7 @@ struct ChatHistoryView: View {
             ScrollView {
                 VStack {
                     ForEach(viewModel.conversations, id: \.self) { conversation in
-                        NavigationLink(destination: ChatHistoryConversationView(conversation: conversation)){
+                        NavigationLink(destination: ChatHistoryConversationView(conversation: conversation).padding()){
                             ConversationRowView(conversation: conversation)
                         }
                     }
@@ -27,6 +27,7 @@ struct ChatHistoryView: View {
                 viewModel.fetchConversations()
             }
         }
+
     }
 }
 
