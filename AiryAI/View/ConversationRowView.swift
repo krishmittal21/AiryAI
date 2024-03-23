@@ -22,6 +22,7 @@ struct ConversationRowView: View {
             Image(systemName: "arrow.forward")
         }
         .bold()
+        .multilineTextAlignment(.leading)
         .foregroundStyle(colorScheme == .dark ? .white : .black)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(15)
