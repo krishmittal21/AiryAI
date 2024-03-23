@@ -12,7 +12,6 @@
 		CC195A582BAC36CA002F2CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A572BAC36CA002F2CA3 /* Assets.xcassets */; };
 		CC195A5B2BAC36CA002F2CA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */; };
 		CC5A8D992BAEAA2B004E53D5 /* ChatHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A8D982BAEAA2B004E53D5 /* ChatHistoryViewModel.swift */; };
-		CC5A8D9B2BAEB0E3004E53D5 /* ChatHistoryConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A8D9A2BAEB0E3004E53D5 /* ChatHistoryConversationView.swift */; };
 		CC5A8D9D2BAECE8A004E53D5 /* ConversationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A8D9C2BAECE8A004E53D5 /* ConversationRowView.swift */; };
 		CC84A1732BADCE240040B837 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1722BADCE240040B837 /* ChatBubbleShape.swift */; };
 		CC89C4972BAD29060093F612 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4962BAD29050093F612 /* ChatView.swift */; };
@@ -26,6 +25,7 @@
 		CC89C4AA2BAD78B90093F612 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */; };
 		CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4AD2BAD89380093F612 /* Chat.swift */; };
 		CC89C4B02BAD93980093F612 /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */; };
+		CC91593B2BAEEF800039B26E /* ChatConversationMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91593A2BAEEF800039B26E /* ChatConversationMessageView.swift */; };
 		CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974CBD2BAC5BAD00B37129 /* Extensions.swift */; };
 		CC974CC12BAC5C7000B37129 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CC02BAC5C7000B37129 /* FirebaseAnalytics */; };
 		CC974CC32BAC5C7000B37129 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = CC974CC22BAC5C7000B37129 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -70,7 +70,6 @@
 		CC195A572BAC36CA002F2CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CC5A8D982BAEAA2B004E53D5 /* ChatHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryViewModel.swift; sourceTree = "<group>"; };
-		CC5A8D9A2BAEB0E3004E53D5 /* ChatHistoryConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryConversationView.swift; sourceTree = "<group>"; };
 		CC5A8D9C2BAECE8A004E53D5 /* ConversationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationRowView.swift; sourceTree = "<group>"; };
 		CC84A1722BADCE240040B837 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
 		CC89C4962BAD29050093F612 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -83,6 +82,7 @@
 		CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
 		CC89C4AD2BAD89380093F612 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
+		CC91593A2BAEEF800039B26E /* ChatConversationMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatConversationMessageView.swift; sourceTree = "<group>"; };
 		CC974CBD2BAC5BAD00B37129 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CC974CFE2BAC5CE000B37129 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CC974D002BAC5CED00B37129 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
@@ -205,8 +205,8 @@
 				CC89C4A22BAD71CE0093F612 /* APIKey.swift */,
 				CC84A1722BADCE240040B837 /* ChatBubbleShape.swift */,
 				CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */,
-				CC5A8D9A2BAEB0E3004E53D5 /* ChatHistoryConversationView.swift */,
 				CC5A8D9C2BAECE8A004E53D5 /* ConversationRowView.swift */,
+				CC91593A2BAEEF800039B26E /* ChatConversationMessageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,8 +341,8 @@
 				CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */,
 				CC89C4972BAD29060093F612 /* ChatView.swift in Sources */,
 				CC5A8D9D2BAECE8A004E53D5 /* ConversationRowView.swift in Sources */,
-				CC5A8D9B2BAEB0E3004E53D5 /* ChatHistoryConversationView.swift in Sources */,
 				CC5A8D992BAEAA2B004E53D5 /* ChatHistoryViewModel.swift in Sources */,
+				CC91593B2BAEEF800039B26E /* ChatConversationMessageView.swift in Sources */,
 				CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */,
 				CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */,
 				CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */,
