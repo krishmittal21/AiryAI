@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @StateObject var viewModel = AuthenticationViewModel()
     var body: some View {
-        Text("Settings")
+        Button{
+            viewModel.signOut()
+        } label: {
+            Text("log out")
+        }
     }
 }
 

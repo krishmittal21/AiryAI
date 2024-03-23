@@ -17,6 +17,7 @@ struct ChatView: View {
     private func sendMessage() {
         Task {
             await viewModel.sendMessages(message: userText,imageData:selectedPhotoData)
+            viewModel.saveMessages()
             selectedPhotoData.removeAll()
             userText = ""
         }
@@ -26,12 +27,12 @@ struct ChatView: View {
             Spacer()
             ScrollViewReader(content: { proxy in
                 ScrollView {
-                    ForEach(viewModel.messages) { chatMessage in
+                    ForEach(viewModel.conversation) { chatMessage in
                         chatMessageView(chatMessage)
                     }
                 }
-                .onChange(of: viewModel.messages) {
-                    guard let recentMessage = viewModel.messages.last else {
+                .onChange(of: viewModel.conversation) {
+                    guard let recentMessage = viewModel.conversation.last else {
                         return
                     }
                     DispatchQueue.main.async {

@@ -8,11 +8,26 @@
 import SwiftUI
 
 struct ChatHistoryView: View {
+    @StateObject private var viewModel = ChatHistoryViewModel()
     var body: some View {
-        Text("History")
+        NavigationView {
+            ScrollView {
+                VStack {
+                    ForEach(viewModel.conversations, id: \.self) { conversation in
+                        NavigationLink(destination: ChatHistoryConversationView(conversation: conversation).padding()){
+                            ConversationRowView(conversation: conversation)
+    
+                        }
+                    }
+                }
+                .padding()
+            }
+            .padding()
+            .scrollContentBackground(.hidden)
+            .onAppear {
+                viewModel.fetchConversations()
+            }
+        }
     }
 }
 
-#Preview {
-    ChatHistoryView()
-}
