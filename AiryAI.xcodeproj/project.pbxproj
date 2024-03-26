@@ -20,7 +20,6 @@
 		CC89C4992BAD29320093F612 /* AssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4982BAD29320093F612 /* AssistantView.swift */; };
 		CC89C49B2BAD29450093F612 /* ChatHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C49A2BAD29450093F612 /* ChatHistoryView.swift */; };
 		CC89C49D2BAD2F9F0093F612 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C49C2BAD2F9F0093F612 /* SettingsView.swift */; };
-		CC89C49F2BAD35C30093F612 /* TabWithToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C49E2BAD35C30093F612 /* TabWithToolbarView.swift */; };
 		CC89C4A32BAD71CE0093F612 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4A22BAD71CE0093F612 /* APIKey.swift */; };
 		CC89C4A62BAD73E00093F612 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = CC89C4A52BAD73E00093F612 /* GoogleGenerativeAI */; };
 		CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4A72BAD74D80093F612 /* ChatViewModel.swift */; };
@@ -80,7 +79,6 @@
 		CC89C4982BAD29320093F612 /* AssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantView.swift; sourceTree = "<group>"; };
 		CC89C49A2BAD29450093F612 /* ChatHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistoryView.swift; sourceTree = "<group>"; };
 		CC89C49C2BAD2F9F0093F612 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		CC89C49E2BAD35C30093F612 /* TabWithToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabWithToolbarView.swift; sourceTree = "<group>"; };
 		CC89C4A22BAD71CE0093F612 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		CC89C4A72BAD74D80093F612 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
@@ -206,7 +204,6 @@
 				CC89C4982BAD29320093F612 /* AssistantView.swift */,
 				CC89C49A2BAD29450093F612 /* ChatHistoryView.swift */,
 				CC89C49C2BAD2F9F0093F612 /* SettingsView.swift */,
-				CC89C49E2BAD35C30093F612 /* TabWithToolbarView.swift */,
 				CC89C4A22BAD71CE0093F612 /* APIKey.swift */,
 				CC84A1722BADCE240040B837 /* ChatBubbleShape.swift */,
 				CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */,
@@ -337,7 +334,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC89C49F2BAD35C30093F612 /* TabWithToolbarView.swift in Sources */,
 				CC974D032BAC5D1600B37129 /* AuthenticationViewModel.swift in Sources */,
 				CC89C4992BAD29320093F612 /* AssistantView.swift in Sources */,
 				CC195A562BAC36C9002F2CA3 /* MainView.swift in Sources */,
