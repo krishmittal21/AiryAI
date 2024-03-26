@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0AB9702BB2699C007A006F /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AB96F2BB2699C007A006F /* Sidebar.swift */; };
+		CC0AB9722BB26F8F007A006F /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AB9712BB26F8F007A006F /* SidebarView.swift */; };
 		CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */; };
 		CC195A562BAC36C9002F2CA3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC195A552BAC36C9002F2CA3 /* MainView.swift */; };
 		CC195A582BAC36CA002F2CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A572BAC36CA002F2CA3 /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC0AB96F2BB2699C007A006F /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		CC0AB9712BB26F8F007A006F /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		CC195A502BAC36C9002F2CA3 /* AiryAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiryAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiryAIApp.swift; sourceTree = "<group>"; };
 		CC195A552BAC36C9002F2CA3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -157,7 +161,6 @@
 				CC974D0D2BAC6C8B00B37129 /* GoogleService-Info.plist */,
 				CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */,
 				CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */,
-				CC195A552BAC36C9002F2CA3 /* MainView.swift */,
 				CC974CFD2BAC5CBE00B37129 /* ViewModel */,
 				CC974CFC2BAC5CB700B37129 /* View */,
 				CC974CFB2BAC5CAE00B37129 /* Model */,
@@ -178,6 +181,7 @@
 		CC974CBC2BAC5B9E00B37129 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				CC0AB96F2BB2699C007A006F /* Sidebar.swift */,
 				CC974CBD2BAC5BAD00B37129 /* Extensions.swift */,
 			);
 			path = Utilities;
@@ -195,6 +199,7 @@
 		CC974CFC2BAC5CB700B37129 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CC195A552BAC36C9002F2CA3 /* MainView.swift */,
 				CC974CFE2BAC5CE000B37129 /* LoginView.swift */,
 				CC974D002BAC5CED00B37129 /* SignupView.swift */,
 				CC89C4962BAD29050093F612 /* ChatView.swift */,
@@ -207,6 +212,7 @@
 				CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */,
 				CC5A8D9C2BAECE8A004E53D5 /* ConversationRowView.swift */,
 				CC91593A2BAEEF800039B26E /* ChatConversationMessageView.swift */,
+				CC0AB9712BB26F8F007A006F /* SidebarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 				CC89C49B2BAD29450093F612 /* ChatHistoryView.swift in Sources */,
 				CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */,
 				CC89C4B02BAD93980093F612 /* ChatBubbleView.swift in Sources */,
+				CC0AB9722BB26F8F007A006F /* SidebarView.swift in Sources */,
 				CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */,
 				CC89C4972BAD29060093F612 /* ChatView.swift in Sources */,
 				CC5A8D9D2BAECE8A004E53D5 /* ConversationRowView.swift in Sources */,
@@ -346,6 +353,7 @@
 				CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */,
 				CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */,
 				CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */,
+				CC0AB9702BB2699C007A006F /* Sidebar.swift in Sources */,
 				CC84A1732BADCE240040B837 /* ChatBubbleShape.swift in Sources */,
 				CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */,
 				CC89C4A32BAD71CE0093F612 /* APIKey.swift in Sources */,
