@@ -13,7 +13,7 @@ struct MainView: View {
 
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
-            TabWithToolbarView()
+            SidebarView()
         } else {
             LoginView()
         }
