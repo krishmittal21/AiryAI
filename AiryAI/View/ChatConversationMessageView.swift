@@ -32,9 +32,9 @@ struct ChatConversationMessageView: View {
                     }
                     ChatBubbleView(direction: message.role == .model ? .left : .right) {
                         Text(message.message)
-                            .font(.caption)
+                            .font(.subheadline)
                             .padding(15)
-                            .background(message.role == .model ? Color.customBlue : Color.backgroundColor)
+                            .background(message.role == .model ? Color.modelChatColor : Color.userChatColor)
                     }
                 }
             }
