@@ -68,4 +68,9 @@ class ChatViewModel: ObservableObject {
         }
         db.collection("users").document(uId).collection("conversations").document(session).setData(["messages": messages])
     }
+    
+    func startNewChat() {
+        conversation.removeAll()
+        session = UUID().uuidString
+    }
 }
