@@ -89,6 +89,19 @@ struct ChatView: View {
             }
             .padding()
         }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    selectedPhotoData.removeAll()
+                    userText = ""
+                    viewModel.startNewChat()
+                } label: {
+                    Image(systemName: "square.and.pencil")
+                        .imageScale(.large)
+                        .foregroundStyle(.black)
+                }
+            }
+        }
     }
 }
 

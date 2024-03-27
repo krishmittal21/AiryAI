@@ -10,6 +10,8 @@ import SwiftUI
 extension Color {
     static let primaryColor = Color("CustomBlueColor")
     static let backgroundColor = Color("BackgroundColor")
+    static let modelChatColor = Color("ModelChatColor")
+    static let userChatColor = Color("UserChatColor")
 }
 
 extension Encodable {
