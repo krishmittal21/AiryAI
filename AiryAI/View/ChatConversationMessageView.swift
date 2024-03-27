@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ChatConversationMessageView: View {
     var conversation: [ChatMessage]
-    
     var body: some View {
         ScrollView {
             VStack {
