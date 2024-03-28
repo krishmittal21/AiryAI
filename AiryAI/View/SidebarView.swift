@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SidebarView: View {
-    @StateObject private var chatHistory = ChatHistoryViewModel()
+    @StateObject private var chatHistory = ChatHistory()
     @State private var showMenu: Bool = false
     @State private var selectedTab: Tab = .AiryAI
     @State private var selectedConversation: [ChatMessage]?
