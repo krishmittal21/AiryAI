@@ -11,18 +11,23 @@ struct SidebarView: View {
     @StateObject private var chatHistory = ChatHistoryViewModel()
     @State private var showMenu: Bool = false
     @State private var selectedTab: Tab = .AiryAI
+    @State private var selectedConversation: [ChatMessage]?
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         Sidebar(showMenu: $showMenu) { safeArea in
             NavigationView {
                 VStack {
-                    switch selectedTab {
-                    case .AiryAI:
-                        ChatView()
-                    case .Assistant:
-                        AssistantView()
-                    case .Settings:
-                        SettingsView()
+                    if let selectedConversation = selectedConversation {
+                        ChatConversationMessageView(conversation: selectedConversation)
+                    } else {
+                        switch selectedTab {
+                        case .AiryAI:
+                            ChatView()
+                        case .Assistant:
+                            AssistantView()
+                        case .Settings:
+                            SettingsView()
+                        }
                     }
                 }
                 .navigationTitle(selectedTab.title)
@@ -52,12 +57,19 @@ struct SidebarView: View {
             ForEach(Tab.allCases, id: \.self) { tab in
                 SideBarButton(tab, isSelected: tab == selectedTab.wrappedValue) {
                     selectedTab.wrappedValue = tab
+                    if (selectedConversation != nil) {
+                        selectedConversation = nil
+                    }
                 }
             }
             ScrollView {
                 VStack {
                     ForEach(chatHistory.conversations, id: \.self) { conversation in
-                        ConversationRowView(conversation: conversation)
+                        Button(action: {
+                            selectedConversation = conversation
+                        }) {
+                            ConversationRowView(conversation: conversation)
+                        }
                     }
                 }
             }
@@ -93,7 +105,7 @@ struct SidebarView: View {
             .contentShape(.rect)
             .background(
                 RoundedRectangle(cornerRadius: 20)
-                    .fill(isSelected ? Color.gray.opacity(0.2) : Color.clear)
+                    .fill(isSelected && selectedConversation == nil ? Color.gray.opacity(0.2) : Color.clear)
             )
         })
     }
