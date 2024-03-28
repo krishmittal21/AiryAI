@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SidebarView: View {
+    @StateObject private var chatHistory = ChatHistoryViewModel()
     @State private var showMenu: Bool = false
     @State private var selectedTab: Tab = .AiryAI
     @Environment(\.colorScheme) var colorScheme
@@ -20,8 +21,6 @@ struct SidebarView: View {
                         ChatView()
                     case .Assistant:
                         AssistantView()
-                    case .History:
-                        ChatHistoryView()
                     case .Settings:
                         SettingsView()
                     }
@@ -36,6 +35,9 @@ struct SidebarView: View {
                                 .contentTransition(.symbolEffect)
                         })
                     }
+                }
+                .onAppear {
+                    chatHistory.fetchConversations()
                 }
             }
         } menuView: { safeArea in
@@ -52,6 +54,14 @@ struct SidebarView: View {
                     selectedTab.wrappedValue = tab
                 }
             }
+            ScrollView {
+                VStack {
+                    ForEach(chatHistory.conversations, id: \.self) { conversation in
+                        ConversationRowView(conversation: conversation)
+                    }
+                }
+            }
+            
         }
         .padding(.horizontal, 15)
         .padding(.vertical, 20)
@@ -91,14 +101,12 @@ struct SidebarView: View {
     enum Tab: String, CaseIterable {
         case AiryAI = "logo-transparent"
         case Assistant = "square.grid.2x2"
-        case History = "clock"
         case Settings = "gearshape.fill"
         
         var title: String {
             switch self {
             case .AiryAI: return "AiryAI"
             case .Assistant: return "Assistants"
-            case .History: return "History"
             case .Settings: return "Settings"
             }
         }
