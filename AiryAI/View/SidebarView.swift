@@ -8,22 +8,26 @@
 import SwiftUI
 
 struct SidebarView: View {
+    @StateObject private var chatHistory = ChatHistory()
     @State private var showMenu: Bool = false
     @State private var selectedTab: Tab = .AiryAI
+    @State private var selectedConversation: [ChatMessage]?
     @Environment(\.colorScheme) var colorScheme
     var body: some View {
         Sidebar(showMenu: $showMenu) { safeArea in
             NavigationView {
                 VStack {
-                    switch selectedTab {
-                    case .AiryAI:
-                        ChatView()
-                    case .Assistant:
-                        AssistantView()
-                    case .History:
-                        ChatHistoryView()
-                    case .Settings:
-                        SettingsView()
+                    if let selectedConversation = selectedConversation {
+                        ChatConversationMessageView(conversation: selectedConversation)
+                    } else {
+                        switch selectedTab {
+                        case .AiryAI:
+                            ChatView()
+                        case .Assistant:
+                            AssistantView()
+                        case .Settings:
+                            SettingsView()
+                        }
                     }
                 }
                 .navigationTitle(selectedTab.title)
@@ -36,6 +40,9 @@ struct SidebarView: View {
                                 .contentTransition(.symbolEffect)
                         })
                     }
+                }
+                .onAppear {
+                    chatHistory.fetchConversations()
                 }
             }
         } menuView: { safeArea in
@@ -50,8 +57,25 @@ struct SidebarView: View {
             ForEach(Tab.allCases, id: \.self) { tab in
                 SideBarButton(tab, isSelected: tab == selectedTab.wrappedValue) {
                     selectedTab.wrappedValue = tab
+                    if (selectedConversation != nil) {
+                        selectedConversation = nil
+                    }
                 }
             }
+            HStack { VStack { Divider() } }
+            ScrollView {
+                VStack {
+                    ForEach(chatHistory.conversations, id: \.self) { conversation in
+                        Button(action: { selectedConversation = conversation }) {
+                            ConversationRowView(conversation: conversation)
+                        }
+                    }
+                    .padding(.horizontal, 5)
+                    .padding(.vertical, 5)
+                }
+            }
+            .scrollContentBackground(.hidden)
+            .background(Color.clear)
         }
         .padding(.horizontal, 15)
         .padding(.vertical, 20)
@@ -83,7 +107,7 @@ struct SidebarView: View {
             .contentShape(.rect)
             .background(
                 RoundedRectangle(cornerRadius: 20)
-                    .fill(isSelected ? Color.gray.opacity(0.2) : Color.clear)
+                    .fill(isSelected && selectedConversation == nil ? Color.gray.opacity(0.2) : Color.clear)
             )
         })
     }
@@ -91,14 +115,12 @@ struct SidebarView: View {
     enum Tab: String, CaseIterable {
         case AiryAI = "logo-transparent"
         case Assistant = "square.grid.2x2"
-        case History = "clock"
         case Settings = "gearshape.fill"
         
         var title: String {
             switch self {
             case .AiryAI: return "AiryAI"
             case .Assistant: return "Assistants"
-            case .History: return "History"
             case .Settings: return "Settings"
             }
         }

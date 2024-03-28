@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
-class ChatHistoryViewModel: ObservableObject {
+class ChatHistory: ObservableObject {
     @Published var conversations = [[ChatMessage]]()
     func fetchConversations() {
         let db = Firestore.firestore()

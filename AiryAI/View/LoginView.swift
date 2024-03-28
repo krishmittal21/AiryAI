@@ -10,6 +10,7 @@ import AuthenticationServices
 
 struct LoginView: View {
     
+    @Environment(\.colorScheme) var colorScheme
     @StateObject var viewModel = AuthenticationViewModel()
     @State var isSignupView = false
     
@@ -74,7 +75,7 @@ struct LoginView: View {
                                     .padding(.vertical, 15)
                                     .background(Color.white)
                                     .cornerRadius(8)
-                                    .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                                    .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                             } else {
                                 ProgressView()
                                     .progressViewStyle(CircularProgressViewStyle(tint: .black))
@@ -106,7 +107,7 @@ struct LoginView: View {
                             .padding(.vertical, 15)
                             .background(Color.white)
                             .cornerRadius(8)
-                            .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                            .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                         }
                         
                         SignInWithAppleButton(.signIn) { request in
@@ -116,7 +117,7 @@ struct LoginView: View {
                         }
                         .frame(width: 360, height: 50)
                         .signInWithAppleButtonStyle(.white)
-                        .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                        .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                         
                         Button{
                             isSignupView.toggle()
@@ -135,7 +136,7 @@ struct LoginView: View {
                             .padding(.vertical, 15)
                             .background(Color.white)
                             .cornerRadius(8)
-                            .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                            .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                         }
                     }
                     .padding()
