@@ -54,29 +54,33 @@ struct SidebarView: View {
     @ViewBuilder
     func SideBarMenuView(_ safeArea: UIEdgeInsets, selectedTab: Binding<Tab>) -> some View {
         VStack(alignment: .leading, spacing: 12) {
-            ForEach(Tab.allCases, id: \.self) { tab in
-                SideBarButton(tab, isSelected: tab == selectedTab.wrappedValue) {
-                    selectedTab.wrappedValue = tab
-                    if (selectedConversation != nil) {
-                        selectedConversation = nil
-                    }
-                }
-            }
-            ScrollView {
-                VStack {
-                    ForEach(chatHistory.conversations, id: \.self) { conversation in
-                        Button(action: {
-                            selectedConversation = conversation
-                        }) {
-                            ConversationRowView(conversation: conversation)
+            VStack {
+                ForEach(Tab.allCases, id: \.self) { tab in
+                    SideBarButton(tab, isSelected: tab == selectedTab.wrappedValue) {
+                        selectedTab.wrappedValue = tab
+                        if (selectedConversation != nil) {
+                            selectedConversation = nil
                         }
                     }
                 }
             }
-            
+            .padding(.horizontal, 15)
+            .padding(.top, 20)
+            HStack { VStack { Divider() } }
+            List {
+                VStack {
+                    ForEach(chatHistory.conversations, id: \.self) { conversation in
+                        Button(action: { selectedConversation = conversation }) {
+                            ConversationRowView(conversation: conversation)
+                        }
+                    }
+                }
+                .listRowBackground(Color.clear)
+            }
+            .listRowSeparator(.hidden)
+            .scrollContentBackground(.hidden)
+            .background(Color.clear)
         }
-        .padding(.horizontal, 15)
-        .padding(.vertical, 20)
         .padding(.top, safeArea.top)
         .padding(.bottom, safeArea.bottom)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)

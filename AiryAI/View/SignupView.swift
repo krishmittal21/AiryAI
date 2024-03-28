@@ -10,6 +10,7 @@ import AuthenticationServices
 
 struct SignupView: View {
     
+    @Environment(\.colorScheme) var colorScheme
     @StateObject var viewModel = AuthenticationViewModel()
     
     private func signUpWithEmailPassword() {
@@ -86,7 +87,7 @@ struct SignupView: View {
                         .padding(.vertical, 15)
                         .background(Color.white)
                         .cornerRadius(8)
-                        .shadow(color: Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
+                        .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                 } else {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: .white))

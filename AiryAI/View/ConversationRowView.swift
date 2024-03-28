@@ -18,8 +18,6 @@ struct ConversationRowView: View {
             } else {
                 Text("Untitled")
             }
-            Spacer()
-            Image(systemName: "arrow.forward")
         }
         .bold()
         .multilineTextAlignment(.leading)
