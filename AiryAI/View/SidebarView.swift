@@ -28,8 +28,6 @@ struct SidebarView: View {
                             ChatView()
                         case .Assistant:
                             AssistantView()
-                        case .Settings:
-                            SettingsView()
                         }
                     }
                 }
@@ -131,13 +129,11 @@ struct SidebarView: View {
     enum Tab: String, CaseIterable {
         case AiryAI = "logo-transparent"
         case Assistant = "square.grid.2x2"
-        case Settings = "gearshape.fill"
         
         var title: String {
             switch self {
             case .AiryAI: return "AiryAI"
             case .Assistant: return "Assistants"
-            case .Settings: return "Settings"
             }
         }
     }
@@ -152,19 +148,21 @@ struct SidebarView: View {
                 .background(.blue)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.vertical)
-            
-            VStack(alignment: .leading, spacing: 6){
-                Text(user.name)
-                    .font(.subheadline)
-                
-                Text(user.email)
-                    .font(.footnote)
-                    .tint(.gray)
+            HStack{
+                VStack(alignment: .leading, spacing: 6){
+                    Text(user.name)
+                        .font(.subheadline)
+                    Text(user.email)
+                        .font(.footnote)
+                        .tint(.gray)
+                }
+                .bold()
+                Spacer()
+                Image(systemName: "ellipsis")
             }
         }
     }
 }
-
 
 #Preview {
     SidebarView()
