@@ -9,10 +9,13 @@ import SwiftUI
 
 struct SidebarView: View {
     @StateObject private var chatHistory = ChatHistory()
+    @StateObject private var auth = AuthenticationViewModel()
     @State private var showMenu: Bool = false
+    @State private var showSettings: Bool = false
     @State private var selectedTab: Tab = .AiryAI
     @State private var selectedConversation: [ChatMessage]?
     @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         Sidebar(showMenu: $showMenu) { safeArea in
             NavigationView {
@@ -25,8 +28,6 @@ struct SidebarView: View {
                             ChatView()
                         case .Assistant:
                             AssistantView()
-                        case .Settings:
-                            SettingsView()
                         }
                     }
                 }
@@ -43,7 +44,11 @@ struct SidebarView: View {
                 }
                 .onAppear {
                     chatHistory.fetchConversations()
+                    auth.fetchUser()
                 }
+                .sheet(isPresented: $showSettings, content: {
+                    SettingsView()
+                })
             }
         } menuView: { safeArea in
             SideBarMenuView(safeArea, selectedTab: $selectedTab)
@@ -76,6 +81,15 @@ struct SidebarView: View {
             }
             .scrollContentBackground(.hidden)
             .background(Color.clear)
+            HStack { VStack { Divider() } }
+            if let user = auth.user {
+                SideMenuHeaderView(user: user)
+                    .onTapGesture {
+                        showSettings.toggle()
+                    }
+            } else {
+                Text("Loading Profile ..")
+            }
         }
         .padding(.horizontal, 15)
         .padding(.vertical, 20)
@@ -115,18 +129,40 @@ struct SidebarView: View {
     enum Tab: String, CaseIterable {
         case AiryAI = "logo-transparent"
         case Assistant = "square.grid.2x2"
-        case Settings = "gearshape.fill"
         
         var title: String {
             switch self {
             case .AiryAI: return "AiryAI"
             case .Assistant: return "Assistants"
-            case .Settings: return "Settings"
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func SideMenuHeaderView (user: AAIUser) -> some View {
+        HStack{
+            Image(systemName: "person.circle.fill")
+                .imageScale(.large)
+                .foregroundStyle(.white)
+                .frame(width: 48, height: 48)
+                .background(.blue)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding(.vertical)
+            HStack{
+                VStack(alignment: .leading, spacing: 6){
+                    Text(user.name)
+                        .font(.subheadline)
+                    Text(user.email)
+                        .font(.footnote)
+                        .tint(.gray)
+                }
+                .bold()
+                Spacer()
+                Image(systemName: "ellipsis")
             }
         }
     }
 }
-
 
 #Preview {
     SidebarView()
