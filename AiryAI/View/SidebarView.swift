@@ -9,10 +9,12 @@ import SwiftUI
 
 struct SidebarView: View {
     @StateObject private var chatHistory = ChatHistory()
+    @StateObject private var auth = AuthenticationViewModel()
     @State private var showMenu: Bool = false
     @State private var selectedTab: Tab = .AiryAI
     @State private var selectedConversation: [ChatMessage]?
     @Environment(\.colorScheme) var colorScheme
+    
     var body: some View {
         Sidebar(showMenu: $showMenu) { safeArea in
             NavigationView {
@@ -43,6 +45,7 @@ struct SidebarView: View {
                 }
                 .onAppear {
                     chatHistory.fetchConversations()
+                    auth.fetchUser()
                 }
             }
         } menuView: { safeArea in
@@ -76,6 +79,12 @@ struct SidebarView: View {
             }
             .scrollContentBackground(.hidden)
             .background(Color.clear)
+            HStack { VStack { Divider() } }
+            if let user = auth.user {
+                SideMenuHeaderView(user: user)
+            } else {
+                Text("Loading Profile ..")
+            }
         }
         .padding(.horizontal, 15)
         .padding(.vertical, 20)
@@ -122,6 +131,28 @@ struct SidebarView: View {
             case .AiryAI: return "AiryAI"
             case .Assistant: return "Assistants"
             case .Settings: return "Settings"
+            }
+        }
+    }
+    
+    @ViewBuilder
+    func SideMenuHeaderView (user: AAIUser) -> some View {
+        HStack{
+            Image(systemName: "person.circle.fill")
+                .imageScale(.large)
+                .foregroundStyle(.white)
+                .frame(width: 48, height: 48)
+                .background(.blue)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding(.vertical)
+            
+            VStack(alignment: .leading, spacing: 6){
+                Text(user.name)
+                    .font(.subheadline)
+                
+                Text(user.email)
+                    .font(.footnote)
+                    .tint(.gray)
             }
         }
     }
