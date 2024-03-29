@@ -11,6 +11,7 @@ struct SidebarView: View {
     @StateObject private var chatHistory = ChatHistory()
     @StateObject private var auth = AuthenticationViewModel()
     @State private var showMenu: Bool = false
+    @State private var showSettings: Bool = false
     @State private var selectedTab: Tab = .AiryAI
     @State private var selectedConversation: [ChatMessage]?
     @Environment(\.colorScheme) var colorScheme
@@ -47,6 +48,9 @@ struct SidebarView: View {
                     chatHistory.fetchConversations()
                     auth.fetchUser()
                 }
+                .sheet(isPresented: $showSettings, content: {
+                    SettingsView()
+                })
             }
         } menuView: { safeArea in
             SideBarMenuView(safeArea, selectedTab: $selectedTab)
@@ -82,6 +86,9 @@ struct SidebarView: View {
             HStack { VStack { Divider() } }
             if let user = auth.user {
                 SideMenuHeaderView(user: user)
+                    .onTapGesture {
+                        showSettings.toggle()
+                    }
             } else {
                 Text("Loading Profile ..")
             }
