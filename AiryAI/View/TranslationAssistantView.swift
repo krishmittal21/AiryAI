@@ -10,6 +10,7 @@ import SwiftUI
 struct TranslationAssistantView: View {
     @StateObject private var assistantViewModel = AssistantViewModel()
     @State private var translationText = ""
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         NavigationView {
@@ -28,7 +29,8 @@ struct TranslationAssistantView: View {
                 } label: {
                     Text("Language: " + assistantViewModel.translationLangugae)
                     Spacer()
-                    Image(systemName: "arrow.down.circle")
+                    Image(systemName: "arrow.down")
+                        .bold()
                 }
                 .foregroundStyle(.primary)
                 .padding(.horizontal)
@@ -46,6 +48,15 @@ struct TranslationAssistantView: View {
             .navigationTitle("Translation")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .foregroundColor(.red)
+                    }
+                    
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
                         Task {

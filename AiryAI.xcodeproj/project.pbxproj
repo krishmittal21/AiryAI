@@ -66,6 +66,7 @@
 		CCE637B82BB7F96F00651443 /* AssistantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637B72BB7F96F00651443 /* AssistantViewModel.swift */; };
 		CCE637BA2BB80E3C00651443 /* TranslationAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */; };
 		CCE637BC2BB823E100651443 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BB2BB823E100651443 /* Languages.swift */; };
+		CCE637BE2BB82DEF00651443 /* AssistantTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BD2BB82DEF00651443 /* AssistantTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		CCE637B72BB7F96F00651443 /* AssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantViewModel.swift; sourceTree = "<group>"; };
 		CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationAssistantView.swift; sourceTree = "<group>"; };
 		CCE637BB2BB823E100651443 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
+		CCE637BD2BB82DEF00651443 /* AssistantTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				CC87C5AF2BB50BFA00777738 /* SpeechRecognizer.swift */,
 				CC0AB96F2BB2699C007A006F /* Sidebar.swift */,
 				CC974CBD2BAC5BAD00B37129 /* Extensions.swift */,
+				CCE637BD2BB82DEF00651443 /* AssistantTitleView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				CC89C4972BAD29060093F612 /* ChatView.swift in Sources */,
 				CC5A8D9D2BAECE8A004E53D5 /* ConversationRowView.swift in Sources */,
 				CC5A8D992BAEAA2B004E53D5 /* ChatHistory.swift in Sources */,
+				CCE637BE2BB82DEF00651443 /* AssistantTitleView.swift in Sources */,
 				CC91593B2BAEEF800039B26E /* ChatConversationMessageView.swift in Sources */,
 				CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */,
 				CC87C5B02BB50BFA00777738 /* SpeechRecognizer.swift in Sources */,
