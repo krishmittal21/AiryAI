@@ -31,7 +31,7 @@ struct SidebarView: View {
                         }
                     }
                 }
-                .navigationTitle(selectedTab.title)
+                .navigationTitle(selectedConversation != nil ? "History" : selectedTab.title)
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
