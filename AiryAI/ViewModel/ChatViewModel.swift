@@ -11,7 +11,6 @@ import Firebase
 import FirebaseFirestore
 
 class ChatViewModel: ObservableObject {
-    
     private var userId = ""
     private var proModel = GenerativeModel(name: "gemini-pro", apiKey: APIKey.default)
     private var proVisionModel = GenerativeModel(name: "gemini-pro-vision", apiKey: APIKey.default)

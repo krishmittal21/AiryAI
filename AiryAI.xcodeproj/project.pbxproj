@@ -62,6 +62,8 @@
 		CC974D032BAC5D1600B37129 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D022BAC5D1600B37129 /* AuthenticationViewModel.swift */; };
 		CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D042BAC5D2700B37129 /* AAIUser.swift */; };
 		CC974D0E2BAC6C8B00B37129 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC974D0D2BAC6C8B00B37129 /* GoogleService-Info.plist */; };
+		CCE637B62BB7F89400651443 /* EmailAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637B52BB7F89400651443 /* EmailAssistantView.swift */; };
+		CCE637B82BB7F96F00651443 /* AssistantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637B72BB7F96F00651443 /* AssistantViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		CC974D042BAC5D2700B37129 /* AAIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAIUser.swift; sourceTree = "<group>"; };
 		CC974D0D2BAC6C8B00B37129 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC974D0F2BAC703500B37129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CCE637B52BB7F89400651443 /* EmailAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAssistantView.swift; sourceTree = "<group>"; };
+		CCE637B72BB7F96F00651443 /* AssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +214,7 @@
 				CC5A8D9C2BAECE8A004E53D5 /* ConversationRowView.swift */,
 				CC91593A2BAEEF800039B26E /* ChatConversationMessageView.swift */,
 				CC0AB9712BB26F8F007A006F /* SidebarView.swift */,
+				CCE637B52BB7F89400651443 /* EmailAssistantView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 				CC974D022BAC5D1600B37129 /* AuthenticationViewModel.swift */,
 				CC89C4A72BAD74D80093F612 /* ChatViewModel.swift */,
 				CC5A8D982BAEAA2B004E53D5 /* ChatHistory.swift */,
+				CCE637B72BB7F96F00651443 /* AssistantViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -347,11 +353,13 @@
 				CC91593B2BAEEF800039B26E /* ChatConversationMessageView.swift in Sources */,
 				CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */,
 				CC87C5B02BB50BFA00777738 /* SpeechRecognizer.swift in Sources */,
+				CCE637B82BB7F96F00651443 /* AssistantViewModel.swift in Sources */,
 				CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */,
 				CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */,
 				CC0AB9702BB2699C007A006F /* Sidebar.swift in Sources */,
 				CC84A1732BADCE240040B837 /* ChatBubbleShape.swift in Sources */,
 				CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */,
+				CCE637B62BB7F89400651443 /* EmailAssistantView.swift in Sources */,
 				CC89C4A32BAD71CE0093F612 /* APIKey.swift in Sources */,
 				CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */,
 				CC89C49D2BAD2F9F0093F612 /* SettingsView.swift in Sources */,
