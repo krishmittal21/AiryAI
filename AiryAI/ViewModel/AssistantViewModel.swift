@@ -18,14 +18,17 @@ class AssistantViewModel: ObservableObject {
     private var proVisionModel = GenerativeModel(name: "gemini-pro-vision", apiKey: APIKey.default)
     @Published var emailText = ""
     @Published var outputEmail = ""
-    let emailPrompt = "Write an email on this topic/subject: "
+    @Published var emailType = "New Email"
+    let newEmailPrompt = "Write an email on this topic/subject: "
+    let replyEmailPrompt = "Write an email replying to this email: "
 }
 
 extension AssistantViewModel {
     
     func writeEmail() async {
         do {
-            for try await response in proModel.generateContentStream(emailPrompt + emailText) {
+            let prompt = emailType == "New Email" ? newEmailPrompt + emailText : replyEmailPrompt + emailText
+            for try await response in proModel.generateContentStream(prompt) {
                 outputEmail += response.text!
             }
         } catch {
