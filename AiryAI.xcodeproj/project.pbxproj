@@ -67,6 +67,7 @@
 		CCE637BA2BB80E3C00651443 /* TranslationAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */; };
 		CCE637BC2BB823E100651443 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BB2BB823E100651443 /* Languages.swift */; };
 		CCE637BE2BB82DEF00651443 /* AssistantTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BD2BB82DEF00651443 /* AssistantTitleView.swift */; };
+		CCE637C02BB84B0F00651443 /* PythonAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BF2BB84B0F00651443 /* PythonAssistantView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationAssistantView.swift; sourceTree = "<group>"; };
 		CCE637BB2BB823E100651443 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		CCE637BD2BB82DEF00651443 /* AssistantTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantTitleView.swift; sourceTree = "<group>"; };
+		CCE637BF2BB84B0F00651443 /* PythonAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonAssistantView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 				CC0AB9712BB26F8F007A006F /* SidebarView.swift */,
 				CCE637B52BB7F89400651443 /* EmailAssistantView.swift */,
 				CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */,
+				CCE637BF2BB84B0F00651443 /* PythonAssistantView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				CC89C4A32BAD71CE0093F612 /* APIKey.swift in Sources */,
 				CCE637BA2BB80E3C00651443 /* TranslationAssistantView.swift in Sources */,
 				CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */,
+				CCE637C02BB84B0F00651443 /* PythonAssistantView.swift in Sources */,
 				CC89C49D2BAD2F9F0093F612 /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
