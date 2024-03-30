@@ -64,6 +64,8 @@
 		CC974D0E2BAC6C8B00B37129 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC974D0D2BAC6C8B00B37129 /* GoogleService-Info.plist */; };
 		CCE637B62BB7F89400651443 /* EmailAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637B52BB7F89400651443 /* EmailAssistantView.swift */; };
 		CCE637B82BB7F96F00651443 /* AssistantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637B72BB7F96F00651443 /* AssistantViewModel.swift */; };
+		CCE637BA2BB80E3C00651443 /* TranslationAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */; };
+		CCE637BC2BB823E100651443 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BB2BB823E100651443 /* Languages.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,8 @@
 		CC974D0F2BAC703500B37129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CCE637B52BB7F89400651443 /* EmailAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAssistantView.swift; sourceTree = "<group>"; };
 		CCE637B72BB7F96F00651443 /* AssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantViewModel.swift; sourceTree = "<group>"; };
+		CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationAssistantView.swift; sourceTree = "<group>"; };
+		CCE637BB2BB823E100651443 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 			children = (
 				CC974D042BAC5D2700B37129 /* AAIUser.swift */,
 				CC89C4AD2BAD89380093F612 /* Chat.swift */,
+				CCE637BB2BB823E100651443 /* Languages.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +220,7 @@
 				CC91593A2BAEEF800039B26E /* ChatConversationMessageView.swift */,
 				CC0AB9712BB26F8F007A006F /* SidebarView.swift */,
 				CCE637B52BB7F89400651443 /* EmailAssistantView.swift */,
+				CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,8 +365,10 @@
 				CC0AB9702BB2699C007A006F /* Sidebar.swift in Sources */,
 				CC84A1732BADCE240040B837 /* ChatBubbleShape.swift in Sources */,
 				CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */,
+				CCE637BC2BB823E100651443 /* Languages.swift in Sources */,
 				CCE637B62BB7F89400651443 /* EmailAssistantView.swift in Sources */,
 				CC89C4A32BAD71CE0093F612 /* APIKey.swift in Sources */,
+				CCE637BA2BB80E3C00651443 /* TranslationAssistantView.swift in Sources */,
 				CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */,
 				CC89C49D2BAD2F9F0093F612 /* SettingsView.swift in Sources */,
 			);

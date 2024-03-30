@@ -1,5 +1,5 @@
 //
-//  EmailAssistantView.swift
+//  TranslationAssistantView.swift
 //  AiryAI
 //
 //  Created by Krish Mittal on 30/03/24.
@@ -7,51 +7,50 @@
 
 import SwiftUI
 
-struct EmailAssistantView: View {
+struct TranslationAssistantView: View {
     @StateObject private var assistantViewModel = AssistantViewModel()
-    @State private var emailSubject = ""
-
+    @State private var translationText = ""
+    
     var body: some View {
         NavigationView {
             VStack {
                 HStack { VStack { Divider() } }
                 Menu {
-                    Button {
-                        assistantViewModel.emailType = "New Email"
-                    } label: {
-                        Text("New Email")
-                    }
-                    Button {
-                        assistantViewModel.emailType = "Reply"
-                    } label: {
-                        Text("Reply")
+                    ForEach(Language.allLanguages) { language in
+                        Button(action: {
+                            assistantViewModel.translationLangugae = language.name
+                        }) {
+                            HStack {
+                                Text(language.name + "(" + language.code + ") " + language.flag)
+                            }
+                        }
                     }
                 } label: {
-                    Text("Action: " + assistantViewModel.emailType)
+                    Text("Language: " + assistantViewModel.translationLangugae)
                     Spacer()
                     Image(systemName: "arrow.down.circle")
                 }
                 .foregroundStyle(.primary)
                 .padding(.horizontal)
                 HStack { VStack { Divider() } }
-                let placeHoler = assistantViewModel.emailType == "New Email" ? "What topic or subject would you like to\n write about? " : "Enter the email your received and describe how you would like your response"
-                TextField(placeHoler, text: $emailSubject, axis: .vertical)
+                TextField("Enter text to translate", text: $translationText, axis: .vertical)
                     .lineLimit(2...)
                     .font(.subheadline)
                     .textFieldStyle(.plain)
                     .padding()
+                HStack { VStack { Divider() } }
                 ScrollView {
-                    Text(assistantViewModel.outputEmail)
+                    Text(assistantViewModel.translationResult)
                 }
             }
-            .navigationTitle("Email")
+            .navigationTitle("Translation")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
                         Task {
-                            assistantViewModel.emailText = emailSubject
-                            await assistantViewModel.writeEmail()
+                            assistantViewModel.translationText = translationText
+                            await assistantViewModel.translation()
                         }
                     }) {
                         Text("SUBMIT")
@@ -66,5 +65,5 @@ struct EmailAssistantView: View {
 }
 
 #Preview {
-    EmailAssistantView()
+    TranslationAssistantView()
 }
