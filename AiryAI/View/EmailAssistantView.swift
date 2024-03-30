@@ -45,6 +45,7 @@ struct EmailAssistantView: View {
                 ScrollView {
                     Text(assistantViewModel.outputEmail)
                 }
+                .padding()
             }
             .navigationTitle("Email")
             .navigationBarTitleDisplayMode(.inline)
