@@ -71,7 +71,10 @@ struct SidebarView: View {
             ScrollView {
                 VStack {
                     ForEach(chatHistory.conversations, id: \.self) { conversation in
-                        Button(action: { selectedConversation = conversation }) {
+                        Button(action: {
+                            selectedConversation = conversation
+                            showMenu = false
+                        }) {
                             ConversationRowView(conversation: conversation)
                         }
                     }
@@ -100,7 +103,10 @@ struct SidebarView: View {
     
     @ViewBuilder
     func SideBarButton(_ tab: Tab, isSelected: Bool, onTap: @escaping () -> () = { }) -> some View {
-        Button(action: onTap, label: {
+        Button(action: {
+            onTap()
+            showMenu = false
+        }, label: {
             HStack(spacing: 12) {
                 if tab == .AiryAI {
                     Image("logo-transparent")
