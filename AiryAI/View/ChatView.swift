@@ -31,7 +31,7 @@ struct ChatView: View {
         VStack {
             Spacer()
             ScrollViewReader(content: { proxy in
-                ChatConversationMessageView(conversation: viewModel.conversation)
+                ConversationMessageView(conversation: viewModel.conversation)
                     .onChange(of: viewModel.conversation) {
                         guard let recentMessage = viewModel.conversation.last else {
                             return

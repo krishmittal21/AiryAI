@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SidebarView: View {
     @StateObject private var chatHistory = ChatHistory()
-    @StateObject private var auth = AuthenticationViewModel()
+    @StateObject private var auth = Authentication()
     @State private var showMenu: Bool = false
     @State private var showSettings: Bool = false
     @State private var selectedTab: Tab = .AiryAI
@@ -21,7 +21,7 @@ struct SidebarView: View {
             NavigationView {
                 VStack {
                     if let selectedConversation = selectedConversation {
-                        ChatConversationMessageView(conversation: selectedConversation)
+                        ConversationMessageView(conversation: selectedConversation)
                     } else {
                         switch selectedTab {
                         case .AiryAI:

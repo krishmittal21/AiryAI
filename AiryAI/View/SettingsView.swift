@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @StateObject var auth = AuthenticationViewModel()
+    @StateObject var auth = Authentication()
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {

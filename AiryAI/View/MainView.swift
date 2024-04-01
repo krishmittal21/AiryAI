@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @StateObject var viewModel = AuthenticationViewModel()
+    @StateObject var viewModel = Authentication()
 
     var body: some View {
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
