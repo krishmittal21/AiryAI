@@ -1,4 +1,4 @@
-#AiryAI
+# AiryAI
 
 AiryAI is a versatile AI assistant app that can understand and respond to both text and text-image inputs. Built on top of Google's Gemini API, AiryAI provides intelligent assistance across various domains 
 through specialized assistants like email writing, translation, programming, and more. It also allows you to view your conversation history and engage in open-ended dialogues on diverse topics.
