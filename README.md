@@ -38,7 +38,7 @@ This Project was built in public, and you can follow the process on [Twitter](ht
 ### Light Mode
 | Splash Screen | Authentication | SignUp |
 |---|---|---|
-| <img src="" width="200" height="400"> | <img src="https://github.com/krishmittal21/AiryAI/blob/readme/Screenshots/Light/login.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/AiryAI/blob/readme/Screenshots/Light/signup.png" width="200" height="400"> |
+| <img src="https://github.com/krishmittal21/AiryAI/blob/splash-screen/Screenshots/Light/splash.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/AiryAI/blob/readme/Screenshots/Light/login.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/AiryAI/blob/readme/Screenshots/Light/signup.png" width="200" height="400"> |
 
 | Chat | Chat Example | Chat Example1 |
 |---|---|---|
@@ -55,7 +55,7 @@ This Project was built in public, and you can follow the process on [Twitter](ht
 ### Dark Mode
 | Splash Screen | Authentication | SignUp |
 |---|---|---|
-| <img src="" width="200" height="400"> | <img src="https://github.com/krishmittal21/AiryAI/blob/readme/Screenshots/Dark/login.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/AiryAI/blob/readme/Screenshots/Dark/signin.png" width="200" height="400"> |
+| <img src="https://github.com/krishmittal21/AiryAI/blob/splash-screen/Screenshots/Dark/splash.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/AiryAI/blob/readme/Screenshots/Dark/login.png" width="200" height="400"> | <img src="https://github.com/krishmittal21/AiryAI/blob/readme/Screenshots/Dark/signin.png" width="200" height="400"> |
 
 | Chat | Chat Example | Chat Example1 |
 |---|---|---|
