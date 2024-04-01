@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChatConversationMessageView: View {
+struct ConversationMessageView: View {
     var conversation: [ChatMessage]
     var body: some View {
         ScrollView {

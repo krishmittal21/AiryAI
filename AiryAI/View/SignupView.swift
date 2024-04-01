@@ -11,7 +11,7 @@ import AuthenticationServices
 struct SignupView: View {
     
     @Environment(\.colorScheme) var colorScheme
-    @StateObject var viewModel = AuthenticationViewModel()
+    @StateObject var viewModel = Authentication()
     
     private func signUpWithEmailPassword() {
         Task {

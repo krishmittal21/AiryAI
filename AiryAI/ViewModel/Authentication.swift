@@ -25,7 +25,7 @@ enum AuthenticationError: Error {
 }
 
 @MainActor
-class AuthenticationViewModel: ObservableObject{
+class Authentication: ObservableObject{
     
     @Published var name = ""
     @Published var email = ""
@@ -65,7 +65,7 @@ class AuthenticationViewModel: ObservableObject{
     }
 }
 
-extension AuthenticationViewModel {
+extension Authentication {
     
     func signInWithEmailPassword() async -> Bool {
         do {
@@ -175,7 +175,7 @@ extension AuthenticationViewModel {
     }
 }
 
-extension AuthenticationViewModel {
+extension Authentication {
     func signInWithGoogle() async -> Bool {
         
         guard let clientID = FirebaseApp.app()?.options.clientID else {
@@ -216,7 +216,7 @@ extension AuthenticationViewModel {
     }
 }
 
-extension AuthenticationViewModel {
+extension Authentication {
     func handleSignInWithAppleRequest(_ request: ASAuthorizationAppleIDRequest) {
         request.requestedScopes = [.fullName, .email]
         let nonce = randomNonceString()
