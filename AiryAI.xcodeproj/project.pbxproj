@@ -13,6 +13,7 @@
 		CC195A562BAC36C9002F2CA3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC195A552BAC36C9002F2CA3 /* MainView.swift */; };
 		CC195A582BAC36CA002F2CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A572BAC36CA002F2CA3 /* Assets.xcassets */; };
 		CC195A5B2BAC36CA002F2CA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */; };
+		CC3ECF8C2BBA8FCF00A73810 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3ECF8B2BBA8FCF00A73810 /* SplashScreenView.swift */; };
 		CC5A8D992BAEAA2B004E53D5 /* ChatHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A8D982BAEAA2B004E53D5 /* ChatHistory.swift */; };
 		CC5A8D9D2BAECE8A004E53D5 /* ConversationRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5A8D9C2BAECE8A004E53D5 /* ConversationRowView.swift */; };
 		CC84A1732BADCE240040B837 /* ChatBubbleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC84A1722BADCE240040B837 /* ChatBubbleShape.swift */; };
@@ -81,6 +82,7 @@
 		CC195A552BAC36C9002F2CA3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CC195A572BAC36CA002F2CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC195A5A2BAC36CA002F2CA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC3ECF8B2BBA8FCF00A73810 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		CC5A8D982BAEAA2B004E53D5 /* ChatHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHistory.swift; sourceTree = "<group>"; };
 		CC5A8D9C2BAECE8A004E53D5 /* ConversationRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationRowView.swift; sourceTree = "<group>"; };
 		CC84A1722BADCE240040B837 /* ChatBubbleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatBubbleShape.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				CCE637BF2BB84B0F00651443 /* PythonAssistantView.swift */,
 				CCC388E32BBA61D3007506D2 /* HelpView.swift */,
 				CCC388E52BBA61DE007506D2 /* PrivacyView.swift */,
+				CC3ECF8B2BBA8FCF00A73810 /* SplashScreenView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				CC91593B2BAEEF800039B26E /* ConversationMessageView.swift in Sources */,
 				CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */,
 				CC87C5B02BB50BFA00777738 /* SpeechRecognizer.swift in Sources */,
+				CC3ECF8C2BBA8FCF00A73810 /* SplashScreenView.swift in Sources */,
 				CCE637B82BB7F96F00651443 /* AssistantViewModel.swift in Sources */,
 				CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */,
 				CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */,
