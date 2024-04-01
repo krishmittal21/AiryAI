@@ -10,6 +10,10 @@ import SwiftUI
 struct SettingsView: View {
     @StateObject var auth = Authentication()
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.presentationMode) var presentationMode
+    @State var showTerms:Bool = false
+    @State var showPrivacy:Bool = false
+    @State var showHelp:Bool = false
     
     var body: some View {
         NavigationView {
@@ -48,15 +52,24 @@ struct SettingsView: View {
                             Image(systemName: "questionmark.circle")
                             Text("Help Center")
                         }
+                        .onTapGesture {
+                            showHelp = true
+                        }
                         HStack {
                             Image(systemName: "book.closed")
                             Text("Terms of Use")
+                        }
+                        .onTapGesture {
+                            showTerms = true
                         }
                         HStack {
                             Image(systemName: "lock")
                             Text("Privacy Policy")
                         }
-                    } header: { 
+                        .onTapGesture {
+                            showPrivacy = true
+                        }
+                    } header: {
                         Text("About")
                     }
                     Section {
@@ -73,9 +86,29 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "xmark")
+                            .foregroundColor(.red)
+                    }
+                    
+                }
+            }
             .onAppear {
                 auth.fetchUser()
             }
+            .sheet(isPresented: $showHelp, content: {
+                HelpView()
+            })
+            .sheet(isPresented: $showTerms, content: {
+                TermsofUseView()
+            })
+            .sheet(isPresented: $showPrivacy, content: {
+                PrivacyView()
+            })
         }
     }
 }

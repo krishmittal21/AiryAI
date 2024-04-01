@@ -62,6 +62,9 @@
 		CC974D032BAC5D1600B37129 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D022BAC5D1600B37129 /* Authentication.swift */; };
 		CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D042BAC5D2700B37129 /* AAIUser.swift */; };
 		CC974D0E2BAC6C8B00B37129 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC974D0D2BAC6C8B00B37129 /* GoogleService-Info.plist */; };
+		CCC388E22BBA61C6007506D2 /* TermsofUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E12BBA61C6007506D2 /* TermsofUseView.swift */; };
+		CCC388E42BBA61D3007506D2 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E32BBA61D3007506D2 /* HelpView.swift */; };
+		CCC388E62BBA61DE007506D2 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E52BBA61DE007506D2 /* PrivacyView.swift */; };
 		CCE637B62BB7F89400651443 /* EmailAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637B52BB7F89400651443 /* EmailAssistantView.swift */; };
 		CCE637B82BB7F96F00651443 /* AssistantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637B72BB7F96F00651443 /* AssistantViewModel.swift */; };
 		CCE637BA2BB80E3C00651443 /* TranslationAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */; };
@@ -98,6 +101,9 @@
 		CC974D042BAC5D2700B37129 /* AAIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAIUser.swift; sourceTree = "<group>"; };
 		CC974D0D2BAC6C8B00B37129 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC974D0F2BAC703500B37129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CCC388E12BBA61C6007506D2 /* TermsofUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofUseView.swift; sourceTree = "<group>"; };
+		CCC388E32BBA61D3007506D2 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		CCC388E52BBA61DE007506D2 /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
 		CCE637B52BB7F89400651443 /* EmailAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAssistantView.swift; sourceTree = "<group>"; };
 		CCE637B72BB7F96F00651443 /* AssistantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantViewModel.swift; sourceTree = "<group>"; };
 		CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationAssistantView.swift; sourceTree = "<group>"; };
@@ -215,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				CC195A552BAC36C9002F2CA3 /* MainView.swift */,
+				CCC388E12BBA61C6007506D2 /* TermsofUseView.swift */,
 				CC974CFE2BAC5CE000B37129 /* LoginView.swift */,
 				CC974D002BAC5CED00B37129 /* SignupView.swift */,
 				CC89C4962BAD29050093F612 /* ChatView.swift */,
@@ -227,6 +234,8 @@
 				CCE637B52BB7F89400651443 /* EmailAssistantView.swift */,
 				CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */,
 				CCE637BF2BB84B0F00651443 /* PythonAssistantView.swift */,
+				CCC388E32BBA61D3007506D2 /* HelpView.swift */,
+				CCC388E52BBA61DE007506D2 /* PrivacyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +368,7 @@
 				CC89C4B02BAD93980093F612 /* ChatBubbleView.swift in Sources */,
 				CC0AB9722BB26F8F007A006F /* SidebarView.swift in Sources */,
 				CC974CBE2BAC5BAD00B37129 /* Extensions.swift in Sources */,
+				CCC388E42BBA61D3007506D2 /* HelpView.swift in Sources */,
 				CC89C4972BAD29060093F612 /* ChatView.swift in Sources */,
 				CC5A8D9D2BAECE8A004E53D5 /* ConversationRowView.swift in Sources */,
 				CC5A8D992BAEAA2B004E53D5 /* ChatHistory.swift in Sources */,
@@ -371,6 +381,7 @@
 				CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */,
 				CC0AB9702BB2699C007A006F /* Sidebar.swift in Sources */,
 				CC84A1732BADCE240040B837 /* ChatBubbleShape.swift in Sources */,
+				CCC388E22BBA61C6007506D2 /* TermsofUseView.swift in Sources */,
 				CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */,
 				CCE637BC2BB823E100651443 /* Languages.swift in Sources */,
 				CCE637B62BB7F89400651443 /* EmailAssistantView.swift in Sources */,
@@ -379,6 +390,7 @@
 				CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */,
 				CCE637C02BB84B0F00651443 /* PythonAssistantView.swift in Sources */,
 				CC89C49D2BAD2F9F0093F612 /* SettingsView.swift in Sources */,
+				CCC388E62BBA61DE007506D2 /* PrivacyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
