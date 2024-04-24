@@ -74,10 +74,8 @@ struct ChatView: View {
                     }
                 }
                 
-                TextField("Message", text: $inputText, onCommit: sendMessage)
+                TextField("Message", text: $inputText)
                     .textFieldStyle(RoundedRectTextFieldStyle())
-                    .multilineTextAlignment(.leading)
-                    .submitLabel(.go)
                 
                 Button(action: {
                     if isRecording {
