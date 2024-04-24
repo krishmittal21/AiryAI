@@ -39,11 +39,11 @@ struct SettingsView: View {
                             Text("Basic Plan")
                                 .foregroundStyle(.gray)
                         }
-                        HStack {
-                            Image(systemName: "arrow.up.circle")
-                            Text("Upgrade Your Subscription")
-                        }
-                        .foregroundStyle(.blue)
+//                        HStack {
+//                            Image(systemName: "arrow.up.circle")
+//                            Text("Upgrade Your Subscription")
+//                        }
+//                        .foregroundStyle(.blue)
                     } header: {
                         Text("Account")
                     }
