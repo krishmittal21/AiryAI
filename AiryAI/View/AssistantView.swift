@@ -36,22 +36,22 @@ struct AssistantView: View {
                     }
                 }
                 HStack { VStack { Divider() } }
-                VStack(alignment: .leading) {
-                    VStack(alignment: .leading) {
-                        Text("Programming")
-                            .bold()
-                            .font(.title2)
-                        Text("Write code, debug, test and learn.")
-                            .font(.caption)
-                    }
-                    .padding()
-                    AssistantTileView(title: "Python",
-                                      subtitle: "Debug Python Code",
-                                    number: "1") {
-                        showPythonAssistant.toggle()
-                    }
-                }
-                HStack { VStack { Divider() } }
+//                VStack(alignment: .leading) {
+//                    VStack(alignment: .leading) {
+//                        Text("Programming")
+//                            .bold()
+//                            .font(.title2)
+//                        Text("Write code, debug, test and learn.")
+//                            .font(.caption)
+//                    }
+//                    .padding()
+//                    AssistantTileView(title: "Python",
+//                                      subtitle: "Debug Python Code",
+//                                    number: "1") {
+//                        showPythonAssistant.toggle()
+//                    }
+//                }
+//                HStack { VStack { Divider() } }
             }
             .padding()
             .sheet(isPresented: $showTranslationAssistant, content: {
