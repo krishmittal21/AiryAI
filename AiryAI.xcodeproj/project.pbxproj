@@ -24,7 +24,6 @@
 		CC89C4A32BAD71CE0093F612 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4A22BAD71CE0093F612 /* APIKey.swift */; };
 		CC89C4A62BAD73E00093F612 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = CC89C4A52BAD73E00093F612 /* GoogleGenerativeAI */; };
 		CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4A72BAD74D80093F612 /* ChatViewModel.swift */; };
-		CC89C4AA2BAD78B90093F612 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */; };
 		CC89C4AE2BAD89380093F612 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4AD2BAD89380093F612 /* Chat.swift */; };
 		CC89C4B02BAD93980093F612 /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */; };
 		CC91593B2BAEEF800039B26E /* ConversationMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC91593A2BAEEF800039B26E /* ConversationMessageView.swift */; };
@@ -62,7 +61,6 @@
 		CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D002BAC5CED00B37129 /* SignupView.swift */; };
 		CC974D032BAC5D1600B37129 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D022BAC5D1600B37129 /* Authentication.swift */; };
 		CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D042BAC5D2700B37129 /* AAIUser.swift */; };
-		CC974D0E2BAC6C8B00B37129 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC974D0D2BAC6C8B00B37129 /* GoogleService-Info.plist */; };
 		CCC388E22BBA61C6007506D2 /* TermsofUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E12BBA61C6007506D2 /* TermsofUseView.swift */; };
 		CCC388E42BBA61D3007506D2 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E32BBA61D3007506D2 /* HelpView.swift */; };
 		CCC388E62BBA61DE007506D2 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E52BBA61DE007506D2 /* PrivacyView.swift */; };
@@ -72,6 +70,8 @@
 		CCE637BC2BB823E100651443 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BB2BB823E100651443 /* Languages.swift */; };
 		CCE637BE2BB82DEF00651443 /* AssistantTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BD2BB82DEF00651443 /* AssistantTitleView.swift */; };
 		CCE637C02BB84B0F00651443 /* PythonAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BF2BB84B0F00651443 /* PythonAssistantView.swift */; };
+		CCE9A5342BD8D2BD0040F64F /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCE9A5322BD8D2BD0040F64F /* GenerativeAI-Info.plist */; };
+		CCE9A5352BD8D2BD0040F64F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCE9A5332BD8D2BD0040F64F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,7 +93,6 @@
 		CC89C49C2BAD2F9F0093F612 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		CC89C4A22BAD71CE0093F612 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		CC89C4A72BAD74D80093F612 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
-		CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
 		CC89C4AD2BAD89380093F612 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		CC89C4AF2BAD93980093F612 /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
 		CC91593A2BAEEF800039B26E /* ConversationMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationMessageView.swift; sourceTree = "<group>"; };
@@ -102,7 +101,6 @@
 		CC974D002BAC5CED00B37129 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		CC974D022BAC5D1600B37129 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		CC974D042BAC5D2700B37129 /* AAIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAIUser.swift; sourceTree = "<group>"; };
-		CC974D0D2BAC6C8B00B37129 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC974D0F2BAC703500B37129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CCC388E12BBA61C6007506D2 /* TermsofUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofUseView.swift; sourceTree = "<group>"; };
 		CCC388E32BBA61D3007506D2 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
@@ -113,6 +111,8 @@
 		CCE637BB2BB823E100651443 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		CCE637BD2BB82DEF00651443 /* AssistantTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantTitleView.swift; sourceTree = "<group>"; };
 		CCE637BF2BB84B0F00651443 /* PythonAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonAssistantView.swift; sourceTree = "<group>"; };
+		CCE9A5322BD8D2BD0040F64F /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
+		CCE9A5332BD8D2BD0040F64F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,9 +177,9 @@
 			children = (
 				CC43198C2BD8BCD700D35590 /* AiryAI.entitlements */,
 				CC974D0F2BAC703500B37129 /* Info.plist */,
+				CCE9A5322BD8D2BD0040F64F /* GenerativeAI-Info.plist */,
+				CCE9A5332BD8D2BD0040F64F /* GoogleService-Info.plist */,
 				CC195A572BAC36CA002F2CA3 /* Assets.xcassets */,
-				CC974D0D2BAC6C8B00B37129 /* GoogleService-Info.plist */,
-				CC89C4A92BAD78B90093F612 /* GenerativeAI-Info.plist */,
 				CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */,
 				CC974CFD2BAC5CBE00B37129 /* ViewModel */,
 				CC974CFC2BAC5CB700B37129 /* View */,
@@ -352,9 +352,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC195A5B2BAC36CA002F2CA3 /* Preview Assets.xcassets in Resources */,
+				CCE9A5352BD8D2BD0040F64F /* GoogleService-Info.plist in Resources */,
 				CC195A582BAC36CA002F2CA3 /* Assets.xcassets in Resources */,
-				CC89C4AA2BAD78B90093F612 /* GenerativeAI-Info.plist in Resources */,
-				CC974D0E2BAC6C8B00B37129 /* GoogleService-Info.plist in Resources */,
+				CCE9A5342BD8D2BD0040F64F /* GenerativeAI-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,9 +9,9 @@ import SwiftUI
 import AuthenticationServices
 
 struct SignupView: View {
-    
     @Environment(\.colorScheme) var colorScheme
     @StateObject var viewModel = Authentication()
+    @State var showTerms:Bool = false
     
     private func signUpWithEmailPassword() {
         Task {
@@ -105,7 +105,13 @@ struct SignupView: View {
                     .foregroundColor(Color.primaryColor)
             }
             .font(.caption)
+            .onTapGesture {
+                showTerms = true
+            }
         }
+        .sheet(isPresented: $showTerms, content: {
+            TermsofUseView()
+        })
     }
 }
 
