@@ -16,7 +16,7 @@ struct SettingsView: View {
     @State var showHelp:Bool = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 List {
                     Section {
@@ -39,11 +39,11 @@ struct SettingsView: View {
                             Text("Basic Plan")
                                 .foregroundStyle(.gray)
                         }
-                        HStack {
-                            Image(systemName: "arrow.up.circle")
-                            Text("Upgrade Your Subscription")
-                        }
-                        .foregroundStyle(.blue)
+//                        HStack {
+//                            Image(systemName: "arrow.up.circle")
+//                            Text("Upgrade Your Subscription")
+//                        }
+//                        .foregroundStyle(.blue)
                     } header: {
                         Text("Account")
                     }
@@ -80,6 +80,16 @@ struct SettingsView: View {
                         .foregroundStyle(.red)
                         .onTapGesture {
                             auth.signOut()
+                        }
+                    }
+                    Section {
+                        HStack {
+                            Image(systemName: "x.circle")
+                            Text("Delete Account")
+                        }
+                        .foregroundStyle(.red)
+                        .onTapGesture {
+                            auth.delete()
                         }
                     }
                 }

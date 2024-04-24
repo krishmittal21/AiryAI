@@ -18,7 +18,7 @@ struct SidebarView: View {
     
     var body: some View {
         Sidebar(showMenu: $showMenu) { safeArea in
-            NavigationView {
+            NavigationStack {
                 VStack {
                     if let selectedConversation = selectedConversation {
                         ConversationMessageView(conversation: selectedConversation)

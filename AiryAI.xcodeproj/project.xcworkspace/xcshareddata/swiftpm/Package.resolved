@@ -1,4 +1,5 @@
 {
+  "originHash" : "53a015913781c23d14bf8967d51c57ebf06d1eddedaf813f1f260768e3918f16",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -145,15 +146,6 @@
       }
     },
     {
-      "identity" : "spline-ios",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/splinetool/spline-ios",
-      "state" : {
-        "branch" : "main",
-        "revision" : "f94a3ac005cda3ee2a440d8a7af118f210f3f852"
-      }
-    },
-    {
       "identity" : "swift-protobuf",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-protobuf.git",
@@ -163,5 +155,5 @@
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
