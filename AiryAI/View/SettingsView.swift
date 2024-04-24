@@ -82,6 +82,16 @@ struct SettingsView: View {
                             auth.signOut()
                         }
                     }
+                    Section {
+                        HStack {
+                            Image(systemName: "x.circle")
+                            Text("Delete Account")
+                        }
+                        .foregroundStyle(.red)
+                        .onTapGesture {
+                            auth.delete()
+                        }
+                    }
                 }
             }
             .navigationTitle("Settings")

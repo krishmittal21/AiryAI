@@ -143,6 +143,10 @@ extension Authentication {
         }
     }
     
+    func delete() {
+        Auth.auth().currentUser?.delete()
+    }
+    
     func validate() -> Bool {
         errorMessage = ""
         
