@@ -39,7 +39,7 @@ class ChatViewModel: ObservableObject {
         }
         catch {
             conversation.removeLast()
-            conversation.append(.init(role: .model, message: "Something went wrong. Please try again"))
+            conversation.append(.init(role: .model, message: "Something went wrong with the AI model. Please try again"))
             print(error.localizedDescription)
         }
     }

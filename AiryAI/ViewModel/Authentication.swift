@@ -40,6 +40,7 @@ class Authentication: ObservableObject{
     
     private var handler: AuthStateDidChangeListenerHandle?
     private var currentNonce: String?
+    private var userListener: ListenerRegistration?
     
     init(){
         self.handler = Auth.auth().addStateDidChangeListener { [weak self] _, user in
@@ -118,12 +119,19 @@ extension Authentication {
             return
         }
         let db = Firestore.firestore()
-        db.collection("users").document(userId).getDocument { [weak self] snapshot, error in
-            guard let data = snapshot?.data(), error == nil else {
+        userListener = db.collection("users").document(userId).addSnapshotListener { [weak self] documentSnapshot, error in
+            guard let self = self else { return }
+            if let error = error {
+                print("Error fetching user: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let data = documentSnapshot?.data() else {
+                print("No user data found")
                 return
             }
             DispatchQueue.main.async {
-                self?.user = AAIUser(
+                self.user = AAIUser(
                     id: data["id"] as? String ?? "",
                     name: data["name"] as? String ?? "",
                     email: data["email"] as? String ?? "",
@@ -266,7 +274,7 @@ extension Authentication {
     }
     func updateDisplayName(for user: User, with appleIDCredential: ASAuthorizationAppleIDCredential, force: Bool = false) async {
         if let currentDisplayName = Auth.auth().currentUser?.displayName, !currentDisplayName.isEmpty {
-            // current user is non-empty, don't overwrite it
+
         }
         else {
             let changeRequest = user.createProfileChangeRequest()
