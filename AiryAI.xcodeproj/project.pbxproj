@@ -534,7 +534,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AiryAI/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to send input to the model. Audio recordings are discarded after input.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Your voice audio is temporarily recorded to transcribe your input and send it to the AI model for processing. For example, you can say \"What's the weather like today?\" and the app will transcribe your voice, send the text to the AI, and provide a relevant response. The audio recordings are discarded immediately after being transcribed and are not stored or transmitted.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view a text transcription of your voice input in the app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -570,7 +570,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AiryAI/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to send input to the model. Audio recordings are discarded after input.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Your voice audio is temporarily recorded to transcribe your input and send it to the AI model for processing. For example, you can say \"What's the weather like today?\" and the app will transcribe your voice, send the text to the AI, and provide a relevant response. The audio recordings are discarded immediately after being transcribed and are not stored or transmitted.";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view a text transcription of your voice input in the app.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
