@@ -28,15 +28,14 @@ struct LoginView: View {
         }
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             
-            ZStack{
+            VStack{
                 Image("logo-transparent")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(minHeight: 200, maxHeight: 400)
-                    .padding(.bottom,500)
-                
+            
                 VStack {
                     VStack{
                         Text("Login")
@@ -115,7 +114,8 @@ struct LoginView: View {
                         } onCompletion: { result in
                             viewModel.handleSignInWithAppleCompletion(result)
                         }
-                        .frame(width: 360, height: 50)
+                        .frame(height: 50)
+                        .frame(maxWidth: .infinity)
                         .signInWithAppleButtonStyle(.white)
                         .shadow(color: colorScheme == .dark ? Color.white.opacity(0.2) : Color.black.opacity(0.2), radius: 4, x: 0, y: 2)
                         
@@ -143,7 +143,6 @@ struct LoginView: View {
                 }
                 .listStyle(.plain)
                 .padding()
-                .padding(.top,200)
             }
             .sheet(isPresented: $isSignupView) {
                 SignupView()

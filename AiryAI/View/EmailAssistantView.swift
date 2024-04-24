@@ -13,7 +13,7 @@ struct EmailAssistantView: View {
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 HStack { VStack { Divider() } }
                 Menu {

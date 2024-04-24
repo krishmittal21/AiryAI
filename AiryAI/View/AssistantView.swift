@@ -13,7 +13,7 @@ struct AssistantView: View {
     @State private var showPythonAssistant = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 HStack { VStack { Divider() } }
                 VStack(alignment: .leading) {

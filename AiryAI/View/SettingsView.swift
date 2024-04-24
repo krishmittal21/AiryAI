@@ -16,7 +16,7 @@ struct SettingsView: View {
     @State var showHelp:Bool = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 List {
                     Section {
