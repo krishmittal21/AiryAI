@@ -66,6 +66,7 @@ class ChatViewModel: ObservableObject {
             messages.append(messageData)
         }
         db.collection("users").document(uId).collection("conversations").document(session).setData(["messages": messages])
+        
     }
     
     func startNewChat() {
