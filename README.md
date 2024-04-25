@@ -1,5 +1,9 @@
 # AiryAI
 
+<p align="center">
+    <a href="https://apps.apple.com/in/app/airyai/id6499241050"><img src="https://texttofloss.com/wp-content/uploads/2021/01/App-Store-Button-transparent.png" alt="Download on the App Store" width="200"></a>
+</p>
+
 AiryAI is a versatile AI assistant app that can understand and respond to both text and text-image inputs. Built on top of Google's Gemini API, AiryAI provides intelligent assistance across various domains 
 through specialized assistants like email writing, translation, programming, and more. It also allows you to view your conversation history and engage in open-ended dialogues on diverse topics.
 
