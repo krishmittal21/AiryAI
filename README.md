@@ -26,16 +26,15 @@ This Project was built in public, and you can follow the process on [Twitter](ht
 - [x]  Text-Image input to model
 - [x]  Conversation History
 - [x]  Assistant Page
-- [ ]  Email Assistant
-- [ ]  Translation Assistant
-- [ ]  Python Assistant
+- [x]  Email Assistant
+- [x]  Translation Assistant
 - [x]  Profile View
 - [x]  Settings
-- [ ]  Terms and Conditions Page
+- [x]  Terms and Conditions Page
 - [x]  Side Menu
 - [x]  Intuitive User Interface
 - [x]  Dark Mode
-- [ ]  Splash Screen
+- [x]  Splash Screen
 
 ## Screenshots
 
