@@ -28,10 +28,6 @@ class AssistantViewModel: ObservableObject {
 
 extension AssistantViewModel {
     
-}
-
-extension AssistantViewModel {
-    
     func translation() async {
         do {
             let prompt = "Translate this text: " + translationText + "to" + translationLangugae

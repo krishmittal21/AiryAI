@@ -6,71 +6,102 @@
 //
 
 import SwiftUI
-import GoogleGenerativeAI
 import Firebase
 import FirebaseFirestore
 
 class ChatViewModel: ObservableObject {
-    private var userId = ""
-    private var proModel = GenerativeModel(name: "gemini-pro", apiKey: APIKey.default)
-    private var proVisionModel = GenerativeModel(name: "gemini-pro-vision", apiKey: APIKey.default)
-    private(set) var conversation = [ChatMessage]()
-    @Published var session = UUID().uuidString
+  @Published private(set) var conversation = [ChatMessage]()
+  @Published var session = UUID().uuidString
+  
+  func sendMessages(message: String, imageData: [Data]) {
+    conversation.append(.init(role: .user, message: message, images: imageData))
+    guard let uId = Auth.auth().currentUser?.uid else { return }
     
-    func sendMessages(message: String, imageData: [Data]) async {
-        conversation.append(.init(role: .user, message: message, images: imageData))
-        conversation.append(.init(role: .model, message: "",images: nil))
-        do {
-            let chatModel = imageData.isEmpty ? proModel : proVisionModel
-            var images = [PartsRepresentable]()
-            for data in imageData {
-                if let compressedData = UIImage(data: data)?.jpegData(compressionQuality: 0.1) {
-                    images.append(ModelContent.Part.jpeg(compressedData))
-                }
-            }
-            let outputStream = chatModel.generateContentStream(message,images)
-            for try await chunk in outputStream {
-                guard let text = chunk.text else {
-                    return
-                }
-                let lastChatMessageIndex = conversation.count - 1
-                conversation[lastChatMessageIndex].message += text
-            }
+    triggerChatAPI(input: message, userId: uId) { text in
+      DispatchQueue.main.async {
+        self.conversation.append(.init(role: .model, message: text, images: nil))
+        self.saveMessages()
+      }
+    }
+  }
+  
+  func saveMessages() {
+    DispatchQueue.global(qos: .background).async {
+      let db = Firestore.firestore()
+      guard let uId = Auth.auth().currentUser?.uid else { return }
+      var messages = [[String: Any]]()
+      for message in self.conversation {
+        var messageData: [String: Any] = [
+          "role": message.role == .user ? "user" : "model",
+          "message": message.message
+        ]
+        if let images = message.images {
+          var imageStrings = [String]()
+          for image in images {
+            let base64String = image.base64EncodedString()
+            imageStrings.append(base64String)
+          }
+          messageData["images"] = imageStrings
         }
-        catch {
-            conversation.removeLast()
-            conversation.append(.init(role: .model, message: "Something went wrong with the AI model. Please try again"))
-            print(error.localizedDescription)
-        }
+        messages.append(messageData)
+      }
+      db.collection("users").document(uId).collection("conversations").document(self.session).setData(["messages": messages])
+    }
+  }
+  
+  func triggerChatAPI(input: String, userId: String, completion: @escaping (String) -> Void)  {
+    guard let url = URL(string: Secrets.chatAPI) else {
+      print("Invalid URL")
+      completion("Invalid URL")
+      return
     }
     
-    func saveMessages() {
-        let db = Firestore.firestore()
-        guard let uId = Auth.auth().currentUser?.uid else {
-            return
-        }
-        var messages = [[String: Any]]()
-        for message in conversation {
-            var messageData: [String: Any] = [
-                "role": message.role == .user ? "user" : "model",
-                "message": message.message
-            ]
-            if let images = message.images {
-                var imageStrings = [String]()
-                for image in images {
-                    let base64String = image.base64EncodedString()
-                    imageStrings.append(base64String)
-                }
-                messageData["images"] = imageStrings
-            }
-            messages.append(messageData)
-        }
-        db.collection("users").document(uId).collection("conversations").document(session).setData(["messages": messages])
-        
+    let requestData = ChatRequest(
+      input: input,
+      assistantId: "E7B8A9C6_D5E4_4567_8901_234567890JKL",
+      userId: userId,
+      threadId: session
+    )
+    
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    
+    do {
+      request.httpBody = try JSONEncoder().encode(requestData)
+    } catch {
+      print("Failed to encode request: \(error)")
+      completion("Failed to encode request: \(error)")
+      return
     }
     
-    func startNewChat() {
-        conversation.removeAll()
-        session = UUID().uuidString
+    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+      if let error = error {
+        print("Request failed: \(error)")
+        completion("Request failed: \(error)")
+        return
+      }
+      
+      guard let data = data else {
+        print("No data received")
+        completion("No data received")
+        return
+      }
+      
+      if let responseString = String(data: data, encoding: .utf8) {
+        print("Response: \(responseString)")
+        completion(responseString)
+      } else {
+        print("Failed to decode response data into a string")
+        completion("Failed to decode response data into a string")
+      }
     }
+    
+    task.resume()
+  }
+  
+  func startNewChat() {
+    conversation.removeAll()
+    session = UUID().uuidString
+  }
 }
