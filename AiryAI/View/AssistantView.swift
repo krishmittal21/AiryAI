@@ -11,7 +11,8 @@ struct AssistantView: View {
     @State private var showTranslationAssistant = false
     @State private var showEmailAssistant = false
     @State private var showPythonAssistant = false
-    
+  @State private var showRizzAssistant = false
+  
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -25,6 +26,7 @@ struct AssistantView: View {
                             .font(.caption)
                     }
                     .padding()
+                  /*
                     AssistantTileView(title: "Email",
                                       subtitle: "Write and Respond to Emails",
                                     number: "1") {
@@ -34,6 +36,11 @@ struct AssistantView: View {
                                       subtitle: "Translate text between languages",number: "2") {
                         showTranslationAssistant.toggle()
                     }
+                  */
+                  AssistantTileView(title: "HingeRizz",
+                                    subtitle: "Rizzup your Hinge match",number: "1") {
+                    showRizzAssistant.toggle()
+                  }
                 }
                 HStack { VStack { Divider() } }
 //                VStack(alignment: .leading) {
@@ -62,6 +69,9 @@ struct AssistantView: View {
             })
             .sheet(isPresented: $showPythonAssistant, content: {
                 PythonAssistantView()
+            })
+            .sheet(isPresented: $showRizzAssistant, content: {
+              RizzAssistantView()
             })
         }
     }

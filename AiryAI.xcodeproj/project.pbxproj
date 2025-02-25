@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC0AB9702BB2699C007A006F /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AB96F2BB2699C007A006F /* Sidebar.swift */; };
 		CC0AB9722BB26F8F007A006F /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AB9712BB26F8F007A006F /* SidebarView.swift */; };
+		CC0DC4962D64F77700121444 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CC0DC4952D64F77700121444 /* GoogleService-Info.plist */; };
 		CC195A542BAC36C9002F2CA3 /* AiryAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */; };
 		CC195A562BAC36C9002F2CA3 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC195A552BAC36C9002F2CA3 /* MainView.swift */; };
 		CC195A582BAC36CA002F2CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC195A572BAC36CA002F2CA3 /* Assets.xcassets */; };
@@ -61,6 +62,10 @@
 		CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D002BAC5CED00B37129 /* SignupView.swift */; };
 		CC974D032BAC5D1600B37129 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D022BAC5D1600B37129 /* Authentication.swift */; };
 		CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC974D042BAC5D2700B37129 /* AAIUser.swift */; };
+		CCB0600F2D637F290001F036 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB0600C2D637F280001F036 /* GenerativeAI-Info.plist */; };
+		CCB060112D637F490001F036 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB060102D637F450001F036 /* Secrets.swift */; };
+		CCB062852D63897F0001F036 /* ChatRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB062842D63897F0001F036 /* ChatRequest.swift */; };
+		CCBAC00E2D6E0FAC00787D2D /* RizzAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBAC00D2D6E0FAC00787D2D /* RizzAssistantView.swift */; };
 		CCC388E22BBA61C6007506D2 /* TermsofUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E12BBA61C6007506D2 /* TermsofUseView.swift */; };
 		CCC388E42BBA61D3007506D2 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E32BBA61D3007506D2 /* HelpView.swift */; };
 		CCC388E62BBA61DE007506D2 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E52BBA61DE007506D2 /* PrivacyView.swift */; };
@@ -70,13 +75,12 @@
 		CCE637BC2BB823E100651443 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BB2BB823E100651443 /* Languages.swift */; };
 		CCE637BE2BB82DEF00651443 /* AssistantTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BD2BB82DEF00651443 /* AssistantTitleView.swift */; };
 		CCE637C02BB84B0F00651443 /* PythonAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE637BF2BB84B0F00651443 /* PythonAssistantView.swift */; };
-		CCE9A5342BD8D2BD0040F64F /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCE9A5322BD8D2BD0040F64F /* GenerativeAI-Info.plist */; };
-		CCE9A5352BD8D2BD0040F64F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCE9A5332BD8D2BD0040F64F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CC0AB96F2BB2699C007A006F /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		CC0AB9712BB26F8F007A006F /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		CC0DC4952D64F77700121444 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CC195A502BAC36C9002F2CA3 /* AiryAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiryAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiryAIApp.swift; sourceTree = "<group>"; };
 		CC195A552BAC36C9002F2CA3 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -102,6 +106,10 @@
 		CC974D022BAC5D1600B37129 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		CC974D042BAC5D2700B37129 /* AAIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AAIUser.swift; sourceTree = "<group>"; };
 		CC974D0F2BAC703500B37129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CCB0600C2D637F280001F036 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
+		CCB060102D637F450001F036 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		CCB062842D63897F0001F036 /* ChatRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequest.swift; sourceTree = "<group>"; };
+		CCBAC00D2D6E0FAC00787D2D /* RizzAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RizzAssistantView.swift; sourceTree = "<group>"; };
 		CCC388E12BBA61C6007506D2 /* TermsofUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofUseView.swift; sourceTree = "<group>"; };
 		CCC388E32BBA61D3007506D2 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		CCC388E52BBA61DE007506D2 /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
@@ -111,8 +119,6 @@
 		CCE637BB2BB823E100651443 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		CCE637BD2BB82DEF00651443 /* AssistantTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantTitleView.swift; sourceTree = "<group>"; };
 		CCE637BF2BB84B0F00651443 /* PythonAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythonAssistantView.swift; sourceTree = "<group>"; };
-		CCE9A5322BD8D2BD0040F64F /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
-		CCE9A5332BD8D2BD0040F64F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,10 +181,11 @@
 		CC195A522BAC36C9002F2CA3 /* AiryAI */ = {
 			isa = PBXGroup;
 			children = (
+				CCB060102D637F450001F036 /* Secrets.swift */,
+				CCB0600C2D637F280001F036 /* GenerativeAI-Info.plist */,
+				CC0DC4952D64F77700121444 /* GoogleService-Info.plist */,
 				CC43198C2BD8BCD700D35590 /* AiryAI.entitlements */,
 				CC974D0F2BAC703500B37129 /* Info.plist */,
-				CCE9A5322BD8D2BD0040F64F /* GenerativeAI-Info.plist */,
-				CCE9A5332BD8D2BD0040F64F /* GoogleService-Info.plist */,
 				CC195A572BAC36CA002F2CA3 /* Assets.xcassets */,
 				CC195A532BAC36C9002F2CA3 /* AiryAIApp.swift */,
 				CC974CFD2BAC5CBE00B37129 /* ViewModel */,
@@ -214,6 +221,7 @@
 		CC974CFB2BAC5CAE00B37129 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CCB062842D63897F0001F036 /* ChatRequest.swift */,
 				CC974D042BAC5D2700B37129 /* AAIUser.swift */,
 				CC89C4AD2BAD89380093F612 /* Chat.swift */,
 				CCE637BB2BB823E100651443 /* Languages.swift */,
@@ -236,6 +244,7 @@
 				CC91593A2BAEEF800039B26E /* ConversationMessageView.swift */,
 				CC0AB9712BB26F8F007A006F /* SidebarView.swift */,
 				CCE637B52BB7F89400651443 /* EmailAssistantView.swift */,
+				CCBAC00D2D6E0FAC00787D2D /* RizzAssistantView.swift */,
 				CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */,
 				CCE637BF2BB84B0F00651443 /* PythonAssistantView.swift */,
 				CCC388E32BBA61D3007506D2 /* HelpView.swift */,
@@ -352,9 +361,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC195A5B2BAC36CA002F2CA3 /* Preview Assets.xcassets in Resources */,
-				CCE9A5352BD8D2BD0040F64F /* GoogleService-Info.plist in Resources */,
+				CCB0600F2D637F290001F036 /* GenerativeAI-Info.plist in Resources */,
 				CC195A582BAC36CA002F2CA3 /* Assets.xcassets in Resources */,
-				CCE9A5342BD8D2BD0040F64F /* GenerativeAI-Info.plist in Resources */,
+				CC0DC4962D64F77700121444 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +374,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCBAC00E2D6E0FAC00787D2D /* RizzAssistantView.swift in Sources */,
 				CC974D032BAC5D1600B37129 /* Authentication.swift in Sources */,
+				CCB060112D637F490001F036 /* Secrets.swift in Sources */,
 				CC89C4992BAD29320093F612 /* AssistantView.swift in Sources */,
 				CC195A562BAC36C9002F2CA3 /* MainView.swift in Sources */,
 				CC974D052BAC5D2700B37129 /* AAIUser.swift in Sources */,
@@ -381,6 +392,7 @@
 				CC89C4A82BAD74D80093F612 /* ChatViewModel.swift in Sources */,
 				CC87C5B02BB50BFA00777738 /* SpeechRecognizer.swift in Sources */,
 				CC3ECF8C2BBA8FCF00A73810 /* SplashScreenView.swift in Sources */,
+				CCB062852D63897F0001F036 /* ChatRequest.swift in Sources */,
 				CCE637B82BB7F96F00651443 /* AssistantViewModel.swift in Sources */,
 				CC974D012BAC5CED00B37129 /* SignupView.swift in Sources */,
 				CC974CFF2BAC5CE000B37129 /* LoginView.swift in Sources */,
