@@ -65,6 +65,7 @@
 		CCB0600F2D637F290001F036 /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CCB0600C2D637F280001F036 /* GenerativeAI-Info.plist */; };
 		CCB060112D637F490001F036 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB060102D637F450001F036 /* Secrets.swift */; };
 		CCB062852D63897F0001F036 /* ChatRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB062842D63897F0001F036 /* ChatRequest.swift */; };
+		CCBAC00E2D6E0FAC00787D2D /* RizzAssistantView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBAC00D2D6E0FAC00787D2D /* RizzAssistantView.swift */; };
 		CCC388E22BBA61C6007506D2 /* TermsofUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E12BBA61C6007506D2 /* TermsofUseView.swift */; };
 		CCC388E42BBA61D3007506D2 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E32BBA61D3007506D2 /* HelpView.swift */; };
 		CCC388E62BBA61DE007506D2 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC388E52BBA61DE007506D2 /* PrivacyView.swift */; };
@@ -108,6 +109,7 @@
 		CCB0600C2D637F280001F036 /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
 		CCB060102D637F450001F036 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		CCB062842D63897F0001F036 /* ChatRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequest.swift; sourceTree = "<group>"; };
+		CCBAC00D2D6E0FAC00787D2D /* RizzAssistantView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RizzAssistantView.swift; sourceTree = "<group>"; };
 		CCC388E12BBA61C6007506D2 /* TermsofUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsofUseView.swift; sourceTree = "<group>"; };
 		CCC388E32BBA61D3007506D2 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		CCC388E52BBA61DE007506D2 /* PrivacyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				CC91593A2BAEEF800039B26E /* ConversationMessageView.swift */,
 				CC0AB9712BB26F8F007A006F /* SidebarView.swift */,
 				CCE637B52BB7F89400651443 /* EmailAssistantView.swift */,
+				CCBAC00D2D6E0FAC00787D2D /* RizzAssistantView.swift */,
 				CCE637B92BB80E3C00651443 /* TranslationAssistantView.swift */,
 				CCE637BF2BB84B0F00651443 /* PythonAssistantView.swift */,
 				CCC388E32BBA61D3007506D2 /* HelpView.swift */,
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCBAC00E2D6E0FAC00787D2D /* RizzAssistantView.swift in Sources */,
 				CC974D032BAC5D1600B37129 /* Authentication.swift in Sources */,
 				CCB060112D637F490001F036 /* Secrets.swift in Sources */,
 				CC89C4992BAD29320093F612 /* AssistantView.swift in Sources */,
